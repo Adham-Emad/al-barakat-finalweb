@@ -1,0 +1,70 @@
+@import url("https://use.typekit.net/rxt2efr.css");
+
+/* noto-sans-regular - latin */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/noto-sans-v9-latin-regular.eot");
+    src: local("Noto Sans"), local("NotoSans"), url("/fonts/noto-sans-v9-latin-regular.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/noto-sans-v9-latin-regular.woff2") format("woff2"), url("/fonts/noto-sans-v9-latin-regular.woff") format("woff"),
+        url("/fonts/noto-sans-v9-latin-regular.ttf") format("truetype");
+}
+
+/* latin-ext */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/latin-ext-nato-sans-400.woff2") format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* noto-sans-700 - latin */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/noto-sans-v9-latin-700.eot");
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"), url("/fonts/noto-sans-v9-latin-700.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/noto-sans-v9-latin-700.woff2") format("woff2"), url("/fonts/noto-sans-v9-latin-700.woff") format("woff"),
+        url("/fonts/noto-sans-v9-latin-700.ttf") format("truetype");
+}
+
+/* latin-ext */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/latin-ext-nato-sans-700.woff2") format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* noto-sans-800 - latin */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/noto-sans-v9-latin-700.eot");
+    src: local("Noto Sans Bold"), local("NotoSans-Bold"), url("/fonts/noto-sans-v9-latin-700.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/noto-sans-v9-latin-700.woff2") format("woff2"), url("/fonts/noto-sans-v9-latin-700.woff") format("woff"),
+        url("/fonts/noto-sans-v9-latin-700.ttf") format("truetype");
+}
+
+/* latin-ext */
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/fonts/latin-ext-nato-sans-700.woff2") format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+    --headline-font-family: "canada-type-gibson", sans-serif;
+    --body-font-family: "canada-type-gibson", sans-serif;
+    --fallback-font-family: "Noto Sans", sans-serif;
+ }

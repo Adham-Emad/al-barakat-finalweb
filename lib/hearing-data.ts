@@ -1,0 +1,374 @@
+export const productCategories = [
+  {
+    id: "pure-ric", // تأكد إن الـ id هنا مطابق للـ slug الجديد
+    name: "Pure RIC",
+    description: "Receiver-In-Canal hearing aids with natural sound quality",
+    image: "/images/product-showcase-1.jpg",
+  },
+  {
+    id: "styletto-slim-ric", // تعديل الـ id ليتطابق مع المسار
+    name: "Styletto Slim RIC",
+    description: "Sleek and stylish slim design with premium features",
+    image: "/images/signia-styletto-ix.jpg",
+  },
+  {
+    id: "motion",
+    name: "Motion",
+    description: "Advanced motion sensors for enhanced hearing experience",
+    image: "/images/SIGNIA_MOTION_X.jpg",
+  },
+  {
+    id: "intuis4",
+    name: "Intuis 4",
+    description: "Intuitive and easy-to-use hearing solutions",
+    image: "/images/custom-lineup.jpg",
+  },
+  {
+    id: "insiogoax", // تعديل الـ id ليتطابق مع المسار الجديد
+    name: "Insio Charge&Go AX",
+    description: "Custom-molded for perfect fit and comfort",
+    image: "/images/Insio-IX_IIC_black_pair_side_1920x1080.webp",
+  },
+  {
+    id: "silk",
+    name: "Silk",
+    description: "Nearly invisible in-ear hearing aids",
+    image: "/images/Portable-Charger-Silk_top-open-with-Silk-ChGo-IX_LED-on_1920x1080.",
+  },
+]
+
+export const brands = [
+  {
+    id: "signia",
+    name: "Signia",
+    description: "Leading innovation in hearing technology",
+    logo: "/signia-hearing-aid-logo.jpg",
+  },
+  {
+    id: "rexton",
+    name: "Rexton",
+    description: "Reliable hearing solutions for every lifestyle",
+    logo: "/rexton-hearing-aid-logo.jpg",
+  },
+]
+
+export const branches = [
+  {
+    id: "1",
+    name: "Al-Barakat Main Center",
+    address: "123 Medical District, City Center",
+    phone: "+9668001248882",
+    email: "Info@albarakatgroup.com",
+    hours: "Sun-Thu: 9AM-8PM, Sat: 10AM-6PM",
+  },
+  {
+    id: "2",
+    name: "Al-Barakat North Branch",
+    address: "456 North Avenue, Shopping Mall",
+    phone: "+9668001248882",
+    email: "Info@albarakatgroup.com",
+    hours: "Sun-Thu: 10AM-9PM, Sat: 10AM-6PM",
+  },
+  {
+    id: "3",
+    name: "Al-Barakat East Branch",
+    address: "789 East Street, Medical Plaza",
+    phone: "+9668001248882",
+    email: "Info@albarakatgroup.com",
+    hours: "Sun-Thu: 9AM-7PM, Sat: 10AM-5PM",
+  },
+]
+
+export const hearingHealthInfo = {
+  howWeHear: {
+    title: "How We Hear",
+    content: "Understanding the hearing process helps you appreciate the importance of hearing health.",
+    sections: [
+      {
+        title: "The Outer Ear",
+        description: "Sound waves enter through the outer ear and travel down the ear canal.",
+      },
+      {
+        title: "The Middle Ear",
+        description: "Vibrations from the eardrum are amplified by tiny bones.",
+      },
+      {
+        title: "The Inner Ear",
+        description: "The cochlea converts vibrations into electrical signals sent to the brain.",
+      },
+    ],
+  },
+  hearingLoss: {
+    title: "Understanding Hearing Loss",
+    types: [
+      {
+        name: "Conductive Hearing Loss",
+        description: "Occurs when sound cannot efficiently travel through the outer or middle ear.",
+      },
+      {
+        name: "Sensorineural Hearing Loss",
+        description: "Results from damage to the inner ear or auditory nerve.",
+      },
+      {
+        name: "Mixed Hearing Loss",
+        description: "A combination of conductive and sensorineural hearing loss.",
+      },
+    ],
+    signs: [
+      "Difficulty understanding conversations in noisy environments",
+      "Frequently asking people to repeat themselves",
+      "Turning up the TV or radio volume",
+      "Ringing or buzzing in the ears (tinnitus)",
+      "Difficulty hearing high-pitched sounds",
+    ],
+  },
+  tinnitus: {
+    title: "Tinnitus Management",
+    description: "Tinnitus is the perception of sound when no external sound is present.",
+    solutions: [
+      "Sound therapy and masking devices",
+      "Hearing aids with tinnitus features",
+      "Counseling and relaxation techniques",
+      "Lifestyle modifications",
+    ],
+  },
+}
+
+export const products = [
+  {
+    id: "pure-ric-1",
+    name: "Pure RIC",
+    brand: "signia",
+    category: "pure-ric", // الربط مع الـ category الصحيح
+    description:
+      "Receiver-in-canal design for natural sound quality with premium Signia technology and all-day comfort.",
+    price: "Contact for pricing",
+    image: "/images/Signia-Pure-Charge-Go-AX.png",
+    features: [
+      "Rechargeable with 28-hour battery life",
+      "Bluetooth connectivity for calls and music",
+      "AI-powered sound optimization",
+      "Water and dust resistant (IP68)",
+      "Tinnitus therapy features",
+      "Own Voice Processing 2.0",
+    ],
+    specifications: {
+      batteryLife: "28 hours",
+      connectivity: "Bluetooth 5.2",
+      waterResistance: "IP68",
+      colors: ["Beige", "Black", "Silver"],
+    },
+  },
+  {
+    id: "styletto-ix-1",
+    name: "Styletto IX",
+    brand: "signia",
+    category: "styletto-slim-ric", // تعديل هنا للربط مع الـ slug الجديد
+    description: "Latest generation Styletto with Integrated Xperience technology and premium design.",
+    price: "Contact for pricing",
+    image: "/images/signia-styletto-ix.jpg",
+    features: [
+      "Ultra-slim and stylish design",
+      "Integrated Xperience technology",
+      "Portable charging case",
+      "Direct streaming from iOS and Android",
+      "Rechargeable lithium-ion battery",
+      "Advanced speech understanding",
+    ],
+    specifications: {
+      batteryLife: "22 hours",
+      connectivity: "Bluetooth 5.2",
+      waterResistance: "IP68",
+      colors: ["Pearl White", "Rose Gold", "Cosmic Blue"],
+    },
+  },
+  {
+    id: "motion-1",
+    name: "Motion",
+    brand: "signia",
+    category: "motion",
+    description: "Rugged, powerful Signia Motion with durability and extended battery life.",
+    price: "Contact for pricing",
+    image: "/images/SIGNIA_MOTION_X.jpg",
+    features: [
+      "Motion sensor technology",
+      "Super power for severe hearing loss",
+      "Rechargeable with portable charger",
+      "Xperience technology",
+      "Bluetooth streaming",
+      "Telecoil for loop systems",
+    ],
+    specifications: {
+      batteryLife: "24 hours",
+      connectivity: "Bluetooth 5.0",
+      waterResistance: "IP68",
+      colors: ["Beige", "Black"],
+    },
+  },
+  {
+    id: "intuis-1",
+    name: "Intuis 4", // تعديل الاسم ليكون أدق
+    brand: "signia",
+    category: "intuis4", // تعديل هنا للربط مع الـ slug الجديد
+    description: "Reliable and easy-to-use hearing solution with durable design.",
+    price: "Contact for pricing",
+    image: "/images/rs-rt-custom-line-up-scaled.jpg",
+    features: [
+      "Easy-to-use controls",
+      "Long-lasting battery",
+      "Feedback cancellation",
+      "Noise reduction",
+      "Multiple programs",
+      "Affordable pricing",
+    ],
+    specifications: {
+      batteryLife: "7-10 days (size 13 battery)",
+      connectivity: "None",
+      waterResistance: "IP67",
+      colors: ["Beige", "Brown"],
+    },
+  },
+  {
+    id: "insio-1",
+    name: "Insio Custom",
+    brand: "signia",
+    category: "insiogoax", // الربط مع المسار الجديد
+    description: "Custom-molded in-ear Signia solution for maximum discretion and comfort.",
+    price: "Contact for pricing",
+    image: "/images/Insio-IX_IIC_black_left_shadow_size-ratio_1920x1080.jpg",
+    features: [
+      "Custom-molded for perfect fit",
+      "Rechargeable in-ear design",
+      "Augmented Xperience technology",
+      "Bluetooth connectivity",
+      "Discreet and comfortable",
+      "Push button control",
+    ],
+    specifications: {
+      batteryLife: "20 hours",
+      connectivity: "Bluetooth 5.0",
+      waterResistance: "IP68",
+      colors: ["Custom matched to skin tone"],
+    },
+  },
+  {
+    id: "silk-1",
+    name: "Silk",
+    brand: "signia",
+    category: "silk",
+    description: "Instant-fit, nearly invisible Signia Silk with rechargeable convenience.",
+    price: "Contact for pricing",
+    image: "/images/Portable-Charger-Silk_top-open-with-Silk-ChGo-IX_LED-on_1920x1080.",
+    features: [
+      "Nearly invisible design",
+      "Instant fit - no custom mold needed",
+      "Rechargeable",
+      "Bluetooth streaming",
+      "AI-powered sound processing",
+      "Comfortable soft silicone sleeves",
+    ],
+    specifications: {
+      batteryLife: "16 hours",
+      connectivity: "Bluetooth 5.2",
+      waterResistance: "IP68",
+      colors: ["Discreet beige"],
+    },
+  },
+  {
+    id: "rexton-reach-1",
+    name: "Rexton Reach",
+    brand: "rexton",
+    category: "pure-ric",
+    description: "Reliable RIC hearing aid with essential features at an accessible price.",
+    price: "Contact for pricing",
+    image: "/images/custom-lineup.jpg",
+    features: [
+      "Rechargeable convenience",
+      "Bluetooth streaming",
+      "Feedback cancellation",
+      "Noise reduction",
+      "Telecoil",
+      "IP68 rated",
+    ],
+    specifications: {
+      batteryLife: "24 hours",
+      connectivity: "Bluetooth 5.0",
+      waterResistance: "IP68",
+      colors: ["Beige", "Black", "Brown"],
+    },
+  },
+  {
+    id: "rexton-bicore-1",
+    name: "Rexton BiCore",
+    brand: "rexton",
+    category: "motion",
+    description: "Dual-core processing for superior sound quality in all environments.",
+    price: "Contact for pricing",
+    image: "/images/rexton-bicore-dualprocessing.png",
+    features: [
+      "Dual-core processor",
+      "Voice Ranger technology",
+      "Rechargeable",
+      "Bluetooth connectivity",
+      "Tinnitus therapy",
+      "Multiple listening programs",
+    ],
+    specifications: {
+      batteryLife: "26 hours",
+      connectivity: "Bluetooth 5.1",
+      waterResistance: "IP68",
+      colors: ["Beige", "Black", "Silver"],
+    },
+  },
+]
+
+export const accessories = [
+  {
+    id: "acc-1",
+    name: "StreamLine TV",
+    description: "Stream TV audio directly to your hearing aids",
+    price: "Contact for pricing",
+    image: "/images/virto-titanium-iic.avif",
+    category: "streaming",
+  },
+  {
+    id: "acc-2",
+    name: "StreamLine Mic",
+    description: "Remote microphone for better hearing in noisy situations",
+    price: "Contact for pricing",
+    image: "/images/panda-hearing-elite-2.webp",
+    category: "microphones",
+  },
+  {
+    id: "acc-3",
+    name: "Hearing Aid Batteries (Size 13)",
+    description: "Long-lasting zinc-air batteries, pack of 60",
+    price: "Contact for pricing",
+    image: "/placeholder.svg?height=200&width=200",
+    category: "batteries",
+  },
+  {
+    id: "acc-4",
+    name: "Hearing Aid Batteries (Size 312)",
+    description: "Long-lasting zinc-air batteries, pack of 60",
+    price: "Contact for pricing",
+    image: "/placeholder.svg?height=200&width=200",
+    category: "batteries",
+  },
+  {
+    id: "acc-5",
+    name: "Drying & Cleaning Kit",
+    description: "Complete care kit for your hearing aids",
+    price: "Contact for pricing",
+    image: "/placeholder.svg?height=200&width=200",
+    category: "care",
+  },
+  {
+    id: "acc-6",
+    name: "Portable Charging Case",
+    description: "Charge on-the-go with this portable case",
+    price: "Contact for pricing",
+    image: "/images/charger-bte-sky-m.avif",
+    category: "chargers",
+  },
+]
