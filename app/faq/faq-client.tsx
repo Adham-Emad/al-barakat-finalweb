@@ -7,6 +7,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+// استيراد الناف بار
+import { MainNavigation } from "@/components/main-navigation"
 
 const faqCategories = [
   {
@@ -150,6 +152,9 @@ export default function FAQClientPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+      {/* إضافة الناف بار هنا */}
+      <MainNavigation />
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-teal-500/10 py-20 md:py-32">
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -323,5 +328,4 @@ export default function FAQClientPage() {
       </section>
     </div>
   )
-  
 }
