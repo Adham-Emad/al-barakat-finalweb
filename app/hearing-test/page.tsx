@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { MainNavigation } from "@/components/main-navigation"
+import { MainNavigation } from "@/components"
 import { EquipmentSetup } from "@/components/equipment-setup"
 import { TheoreticalQuestions } from "@/components/theoretical-questions"
 import { FrequencyTest } from "@/components/frequency-test"

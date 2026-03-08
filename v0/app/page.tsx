@@ -1,7 +1,7 @@
  "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { MainNavigation } from "@/components/main-navigation"
+import { MainNavigation } from "@/components"
 import { HeroVideoSection } from "@/components/hero-video-section"
 import { HearingNewsCarousel } from "@/components/hearing-news-carousel"
 import { Button } from "@/components/ui/button"

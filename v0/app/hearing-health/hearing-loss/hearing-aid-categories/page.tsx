@@ -1,6 +1,6 @@
 "use client"
 
-import { MainNavigation } from "@/components/main-navigation"
+import { MainNavigation } from "@/components"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
