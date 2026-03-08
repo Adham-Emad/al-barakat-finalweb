@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from 'react';
-import { MainNavigation } from "@/components"
+import { MainNavigation } from "@/components/main-navigation"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 

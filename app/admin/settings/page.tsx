@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
-import { MainNavigation } from "@/components"
+import { MainNavigation } from "@/components/main-navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { checkAdminAuth } from "@/lib/admin-auth"

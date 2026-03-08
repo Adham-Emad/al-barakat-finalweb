@@ -2,7 +2,7 @@
 
 
 
-import { MainNavigation } from "@/components"
+import { MainNavigation } from "@/components/main-navigation"
 
 import { Button } from "@/components/ui/button"
 

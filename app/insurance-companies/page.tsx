@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { MainNavigation } from "@/components"
+import { MainNavigation } from "@/components/main-navigation"
 import Image from 'next/image'
 import { motion } from "framer-motion"
 
