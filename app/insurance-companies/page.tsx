@@ -117,7 +117,7 @@ export default function InsuranceCompaniesPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              whileHover={{ y: -12, shadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)" }}
+              whileHover={{ y: -12, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)" }}
               className="group relative bg-white rounded-3xl p-8 border border-slate-100 shadow-sm transition-all duration-500"
             >
               {/* الترقيم بشكل خفي وجميل */}
