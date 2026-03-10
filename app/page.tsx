@@ -49,18 +49,18 @@ const featuredProducts = [
   },
   {
     id: "insio",
-    name: "Signia Signia Insio Go Ax",
+    name: "Signia Insio Charge & Go Ax",
     slug: "insiogoax",
     image: "/images/insiopro.png",
     description: "Custom-made hearing aids designed for comfort and performance.",
   },
   {
-    id: "silk",
-    name: "Signia Silk",
-    slug: "silk",
-    image: "/images/product-showcase-5.jpg",
-    description: "Instant-fit, discreet hearing aids with natural sound quality.",
-  },
+  id: "silk",
+  name: "Signia Silk",
+  slug: "silk#charge-go", // Add the hash here
+  image: "/images/product-showcase-5.jpg",
+  description: "Instant-fit, discreet hearing aids with natural sound quality.",
+},
   {
     id: "intuis",
     name: "Intuis 4",

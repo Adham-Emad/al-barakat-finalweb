@@ -3,7 +3,7 @@
 import { MainNavigation } from "@/components/main-navigation"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { 
   Plus, 
   Minus,
@@ -20,6 +20,25 @@ export default function SilkClient() {
   const [activeModel, setActiveModel] = useState<"silkx" | "silkix">("silkx")
   const [openFaqX, setOpenFaqX] = useState<number | null>(null)
   const [openFaqIX, setOpenFaqIX] = useState<number | null>(null)
+
+  // ==========================================
+  // HASH ROUTING LOGIC (Integrated)
+  // ==========================================
+  useEffect(() => {
+    const handleHashSwitch = () => {
+      // Check if URL ends with #charge-go
+      if (window.location.hash === "#charge-go") {
+        setActiveModel("silkix")
+      } else if (window.location.hash === "#silkx") {
+        setActiveModel("silkx")
+      }
+    }
+
+    handleHashSwitch()
+    window.addEventListener("hashchange", handleHashSwitch)
+    return () => window.removeEventListener("hashchange", handleHashSwitch)
+  }, [])
+  // ==========================================
   
   // 1. حالة الألوان لـ Silk X
   const [activeColorX, setActiveColorX] = useState("Black")
@@ -39,17 +58,23 @@ export default function SilkClient() {
     <div className="min-h-screen bg-white font-sans text-slate-900">
       <MainNavigation />
 
-      {/* 1. Tabs Selection - Fixed Z-index for Navbar visibility */}
+      {/* 1. Tabs Selection */}
       <section className="bg-white py-6 border-b sticky top-0 z-30 shadow-sm">
         <div className="container mx-auto px-6 flex justify-center gap-4">
           <button 
-            onClick={() => setActiveModel("silkx")} 
+            onClick={() => {
+              setActiveModel("silkx")
+              window.history.pushState(null, "", "#silkx")
+            }} 
             className={`px-10 py-3 rounded-full font-bold transition-all ${activeModel === "silkx" ? "bg-primary text-white shadow-md scale-105" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
           >
             Silk X
           </button>
           <button 
-            onClick={() => setActiveModel("silkix")} 
+            onClick={() => {
+              setActiveModel("silkix")
+              window.history.pushState(null, "", "#charge-go")
+            }} 
             className={`px-10 py-3 rounded-full font-bold transition-all ${activeModel === "silkix" ? "bg-primary text-white shadow-md scale-105" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
           >
             Silk Charge&Go IX
@@ -58,7 +83,7 @@ export default function SilkClient() {
       </section>
 
       {/* ========================================================================= */}
-      {/* SECTION: SILK X CONTENT (FULL RESTORED) */}
+      {/* SECTION: SILK X CONTENT */}
       {/* ========================================================================= */}
       {activeModel === "silkx" && (
         <>
@@ -108,6 +133,7 @@ export default function SilkClient() {
                   />
                   <div className="absolute -bottom-6 -right-6 bg-primary p-8 rounded-2xl shadow-xl text-white hidden md:block text-center">
                      <span className="text-4xl font-bold">4</span>
+                     <p className="text-sm font-light"><b>Sleeves</b></p>
                      <p className="text-sm font-light">Available Sizes</p>
                   </div>
                 </div>
@@ -147,7 +173,7 @@ export default function SilkClient() {
             </div>
           </section>
 
-          {/* 7. Product Colors Section Silk X */}
+          {/* Product Colors Section Silk X */}
           <section className="py-24 bg-white border-b border-slate-50">
              <div className="container mx-auto px-6 max-w-7xl grid md:grid-cols-2 gap-16 items-center">
                 <div className="flex justify-center bg-slate-50 rounded-[3rem] p-12">
@@ -180,7 +206,7 @@ export default function SilkClient() {
              </div>
           </section>
 
-          {/* 8. [RESTORED] App Download Section for Silk X */}
+          {/* App Download Section for Silk X */}
           <section className="py-24 bg-white">
             <div className="container mx-auto px-6 max-w-7xl">
               <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -202,9 +228,7 @@ export default function SilkClient() {
                     <img src="/images/mobb.webp" className="w-full drop-shadow-2xl mb-8" alt="Smartphone App" />
                     <h2 className="text-4xl font-bold">Signia app</h2>
                     <p className="text-xl text-slate-600 font-light leading-relaxed">Personalize your hearing experience</p>
-                    <Button asChild variant="outline" className="rounded-full px-8 py-6 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white transition-all">
-                      <Link href="/en/connectivity/signia-app/">Learn more</Link>
-                    </Button>
+                    
                   </div>
                 </div>
               </div>
@@ -236,7 +260,7 @@ export default function SilkClient() {
       )}
 
       {/* ========================================================================= */}
-      {/* SECTION: SILK CHARGE & GO IX CONTENT (FULL RE-INTEGRATED) */}
+      {/* SECTION: SILK CHARGE & GO IX CONTENT */}
       {/* ========================================================================= */}
       {activeModel === "silkix" && (
         <>
@@ -305,7 +329,7 @@ export default function SilkClient() {
             </div>
           </section>
 
-          {/* [RESTORED] Step to Better Hearing Banner */}
+          {/* Step to Better Hearing Banner */}
           <section className="relative w-full h-[450px] md:h-[550px] flex items-center overflow-hidden">
             <img src="https://cdn.signia.net/-/media/signia/global/images/campaigns/signia-ix/silk-chargego-ix/silk-ix_bouldering_man-backview_1900x396.jpg" className="absolute inset-0 w-full h-full object-cover" alt="Better Hearing Banner" />
             <div className="container mx-auto px-6 relative z-10 text-white text-right">
@@ -391,9 +415,7 @@ export default function SilkClient() {
         </>
       )}
 
-      {/* ========================================================== */}
-      {/* GLOBAL FOOTER RESOURCES (Common for both) */}
-      {/* ========================================================== */}
+      {/* GLOBAL FOOTER RESOURCES */}
       <section className="py-24 bg-white border-t border-slate-100 shadow-inner">
         <div className="container mx-auto px-6 max-w-7xl grid md:grid-cols-3 gap-16 text-center">
           <div className="space-y-6 group cursor-pointer">

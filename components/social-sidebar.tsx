@@ -46,9 +46,11 @@ export function SocialSidebar() {
               aria-label={link.label}
               // التأثير هنا يعتمد على حالة الصندوق بالكامل (isBoxHovered)
               animate={{ 
-                filter: isBoxHovered ? "blur(0px)" : "blur(3px)", 
-                opacity: isBoxHovered ? 1 : 0.4,
-                scale: isBoxHovered ? 1.1 : 1
+                // Updated blur values to match the slight screen blur degree
+                filter: isBoxHovered ? "blur(0.5px)" : "blur(0.2px)", 
+                // Updated opacity to also look softer when not hovered, matching the screenshot
+                opacity: isBoxHovered ? 1 : 0.6,
+                scale: isBoxHovered ? 1.05 : 1 // Slightly less aggressive scale for smoothness
               }}
               transition={{ duration: 0.3 }}
             >
