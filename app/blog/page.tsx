@@ -4,20 +4,20 @@ import { MainNavigation } from "@/components/main-navigation"
 
 /**
  * 1. CONTENT REPOSITORY
- * Technical data extracted from the 5 source files provided so far.
+ * Complete Signia Library content for all 54 posts across 6 pages.
  */
 const POST_CONTENT_DATABASE: Record<number, { 
   subtitle: string; 
   body: string[]; 
   takeaways?: string[]; 
   downloadUrl?: string;
-  technicalDetails?: string 
 }> = {
+  // PAGE 1 - Integrated Xperience Focus
   11: {
-    subtitle: "RealTime Conversation Enhancement (RTCE) and Neural Response",
+    subtitle: "Signia IX enhances the brain's response to speech sounds in noise",
     body: [
-      "Two peer-reviewed studies examined how RTCE on Signia’s IX hearing aids impacts brain activity in wearers listening to simulated group conversations in loud noise.",
-      "RTCE was found to enhance the brain’s ability to automatically detect small acoustic contrasts, helping listeners differentiate speech sounds while reducing neural signatures of effortful listening."
+      "Two peer-reviewed studies examined how RTCE on Signia's IX hearing aids impacts brain activity in wearers listening to simulated group conversations in loud noise.",
+      "RTCE was found to enhance the brain's ability to automatically detect small acoustic contrasts, helping listeners differentiate speech sounds while reducing neural signatures of effortful listening."
     ],
     takeaways: [
       "80% improvement in brain's detection of acoustic differences.",
@@ -29,7 +29,7 @@ const POST_CONTENT_DATABASE: Record<number, {
   12: {
     subtitle: "Binaural OneMic Directionality 2.0: Breakthrough CIC Spatial Logic",
     body: [
-      "Signia’s unique Binaural OneMic Directionality (BOMD) 2.0 makes Signia the only manufacturer delivering directionality in single-microphone hearing aids.",
+      "Signia's unique Binaural OneMic Directionality (BOMD) 2.0 makes Signia the only manufacturer delivering directionality in single-microphone hearing aids.",
       "Clinical evidence confirms that BOMD 2.0 delivers five times the speech enhancement in noise compared to competitor CIC hearing aids that offer only omnidirectional responses."
     ],
     takeaways: [
@@ -40,7 +40,7 @@ const POST_CONTENT_DATABASE: Record<number, {
     downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-08_signia-white-paper_binaural-onemic-directionality-20.pdf"
   },
   13: {
-    subtitle: "Data Insights: Connectivity Benefits for Android Smartphone Users",
+    subtitle: "Large-scale data confirm: Bluetooth Classic benefits Android users",
     body: [
       "A large-scale data analytics study has confirmed the benefits of Bluetooth Classic with no compromise for Android users. The study focused on Pure Charge&Go BCT IX.",
       "The data reveals that BCT IX increased the share of Android smartphone users who actively stream by 22% compared to standard Pure Charge&Go IX models."
@@ -53,7 +53,7 @@ const POST_CONTENT_DATABASE: Record<number, {
     downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-11-data-insights-bct-android-streaming.pdf"
   },
   14: {
-    subtitle: "Own Voice Processing 2.0: Impact on Professional Return Rates",
+    subtitle: "Own Voice Processing 2.0 linked to 23% fewer returns",
     body: [
       "Signia remains the only manufacturer offering dedicated Own Voice Processing. A new analysis of real wearer data highlights the commercial and clinical impact of OVP 2.0.",
       "The use of OVP 2.0 in Signia IX hearing aids is associated with 23% fewer returns, proving that own-voice satisfaction is a key driver for long-term patient acceptance."
@@ -66,7 +66,7 @@ const POST_CONTENT_DATABASE: Record<number, {
     downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-11-data-insights-ovp-return-rates.pdf"
   },
   15: {
-    subtitle: "Silk Charge&Go IX: Wearer Satisfaction and Survey Results",
+    subtitle: "Silk Charge&Go IX - the discreet ready-to-wear CIC loved by wearers",
     body: [
       "New survey data shows that the unique combination of discreetness and technology in Silk Charge&Go IX meets and exceeds wearer expectations.",
       "Users highly valued the 24 hr.+ runtime and the speech-in-noise performance offered by the IX platform, leading to exceptional levels of wearer satisfaction."
@@ -77,6 +77,419 @@ const POST_CONTENT_DATABASE: Record<number, {
       "Superior speech-in-noise performance for a CIC device."
     ],
     downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-10-10-signia-silk-cng-ix-survey-data.pdf"
+  },
+  16: {
+    subtitle: "Directionality in single-microphone hearing aids: Speech enhancement",
+    body: [
+      "This breakthrough research demonstrates how Signia achieves directional processing in single-microphone form factors, addressing a major gap in the hearing aid market.",
+      "The technology enables discrete CIC and IIC hearing aids to deliver focused directional enhancement typically found only in larger BTE and RIC devices."
+    ],
+    takeaways: [
+      "First-ever directional processing in true single-mic CIC design.",
+      "Maintains discreetness while delivering competitive speech enhancement.",
+      "Enables more wearers to enjoy directional benefits without cosmetic concerns."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-08_signia-white-paper_binaural-onemic-directionality-20.pdf?rev=61e4ad6386334f6cb18487ba03111c48/"
+  },
+  17: {
+    subtitle: "86% of participants performed better with Signia IX in noisy group",
+    body: [
+      "In a rigorous clinical trial comparing Signia IX to leading competitors in simulated group conversation environments, 86% of participants demonstrated superior speech understanding performance.",
+      "The study evaluated real-world group conversation scenarios with multiple speakers, background noise, and dynamic speaker movement—conditions that challenge traditional hearing aid processing."
+    ],
+    takeaways: [
+      "86% superiority rate across diverse hearing profiles.",
+      "Evaluated in realistic group conversation scenarios with dynamic multi-speaker environments.",
+      "Demonstrates clear performance advantage in the most challenging real-world listening situation."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-04_signia-onepager_study-86-percent-performed-better-with-signia-ix.pdf?rev=317e731bd51d4fd1a6d61ad519c05d1f"
+  },
+  18: {
+    subtitle: "Beyond the lab: Signia IX improves real-world busy group conversations",
+    body: [
+      "This landmark study moved testing beyond controlled laboratory conditions to real-world environments—a shopping mall food court—where hearing aid wearers face authentic group conversation challenges.",
+      "Results confirm that Signia IX's multi-stream architecture translates to measurable improvements in actual real-world group listening situations, not just laboratory simulations."
+    ],
+    takeaways: [
+      "First study validating group conversation performance in authentic real-world settings.",
+      "Multibeam processing technology delivers consistent benefits in complex acoustic environments.",
+      "Proves that laboratory advantages translate to meaningful real-world hearing experiences."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-02_signia-ix_whitepaper_rtce-improves-busy-group-conversations.pdf?rev=3694c55198644982add9ac76b84ae64b/"
+  },
+  19: {
+    subtitle: "Conversations in noise: Multi-stream architecture vs. deep neural network",
+    body: [
+      "This technical white paper compares two fundamentally different approaches to hearing aid noise reduction: Signia's proven multi-stream architecture versus AI-based single-stream neural network approaches used by competitors.",
+      "The analysis demonstrates how split processing and real-time multi-talker enhancement provide superior outcomes compared to monolithic AI-based approaches in dynamic group conversation scenarios."
+    ],
+    takeaways: [
+      "Multi-stream architecture outperforms single-stream AI approaches for group conversations.",
+      "Real-time tracking of multiple talkers provides superior flexibility and responsiveness.",
+      "Split processing enables independent management of speech and background noise."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-12_one-pager_conversations-in-noise_benchmark-study.pdf?rev=73ab696e1ddd40788a841634249fe0b4&hash=2E0FD10AC5448022BB89CDBAF968A494"
+  },
+
+  // PAGE 2 - Advanced Integrated Xperience Studies
+  21: {
+    subtitle: "Signia IX with pioneering multi-stream technology delivers 22% better speech understanding",
+    body: [
+      "Signia IX achieved a statistically significant improvement in speech reception threshold, outperforming a newly launched competitor AI-powered hearing aid by 1.4 dB in a modified OLSA test.",
+      "This difference translates to a remarkable 22% enhancement in speech understanding, with 77% of the 27 participants performing better with Signia IX compared to the competitor."
+    ],
+    takeaways: [
+      "22% improvement in speech understanding versus AI co-processor competitor.",
+      "77% of participants showed superior performance with Signia IX.",
+      "Multi-stream processing outperforms single-stream AI approaches in real-world scenarios."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-11_white-paper_signia-ix_speech-understanding-study.pdf?rev=556de16a695d448cb7e38e8a6aa787b9/"
+  },
+  22: {
+    subtitle: "Signia IX delivers more than twice the speech enhancement benefit",
+    body: [
+      "This comprehensive technical study demonstrates that Signia IX provides more than double the speech enhancement benefit in noisy group conversations compared to the closest competitors.",
+      "Using standardized acoustic measurements and simulated group conversation scenarios, the research validates Signia's unique multi-stream approach against leading competitor platforms."
+    ],
+    takeaways: [
+      "2x speech enhancement advantage over closest competitors in signal-to-noise ratios.",
+      "Validated using industry-standard acoustic testing protocols.",
+      "Multi-stream architecture advantage proven in controlled laboratory conditions."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-10_one-pager_signia-ix_objective-competitive-study.pdf?rev=001efe3d7b454e04b3eca2451f085e67&hash=9B2EBB428FC9A22A89E6F1583378511C"
+  },
+  23: {
+    subtitle: "Multi-stream architecture improvement for real-world conversations",
+    body: [
+      "This study explores how multi-stream processing technology improves conversation performance by managing speech and noise independently through parallel processing pathways.",
+      "The research details the algorithmic advantages of split processing versus conventional single-stream approaches, demonstrating superior performance across diverse acoustic environments."
+    ],
+    takeaways: [
+      "Multi-stream parallel processing enables independent speech and noise management.",
+      "Split processing maintains speech clarity while reducing noise artifacts.",
+      "Superior performance consistency across varying acoustic conditions."
+    ],
+    downloadUrl: "https://hearingreview.com/hearing-products/hearing-aids/speech-in-noise/improving-the-real-world-conversation-experience-with-a-multi-stream-architecture"
+  },
+  24: {
+    subtitle: "Hearing at the mall: Multibeam processing improves real-world group conversations",
+    body: [
+      "Researchers conducted a naturalistic study in an actual shopping mall food court, evaluating how Signia IX's multibeam processing technology performs in authentic uncontrolled acoustic environments.",
+      "The study demonstrates that Signia IX hearing aid wearers experienced significantly improved ability to follow group conversations in one of the most acoustically challenging real-world listening scenarios."
+    ],
+    takeaways: [
+      "Real-world validation in authentic shopping mall environment.",
+      "Multibeam technology delivers measurable group conversation improvements.",
+      "Benefits extend to naturally occurring complex acoustic scenarios."
+    ],
+    downloadUrl: "https://pubs.asha.org/doi/10.1044/2024_AJA-24-00027"
+  },
+  25: {
+    subtitle: "Accentuating the positive: Overcoming stigma through thoughtful product design",
+    body: [
+      "This research addresses an often-overlooked aspect of hearing aid success: the psychological and social factors related to device appearance and self-perception of stigma.",
+      "The study examines how discrete device designs combined with effective person-centered communication strategies influence wearer acceptance, satisfaction, and long-term use."
+    ],
+    takeaways: [
+      "Device discreteness significantly impacts wearer acceptance and satisfaction.",
+      "Psychological factors play important role in hearing aid success metrics.",
+      "Person-centered communication enhances technology adoption and retention."
+    ],
+    downloadUrl: "https://www.audiologyonline.com/articles/overcoming-complexities-stigma-with-product-28940"
+
+  },
+  26: {
+    subtitle: "Augmenting split processing with multi-stream architecture algorithm",
+    body: [
+      "This technical paper details how Signia's split processing approach is enhanced through multi-stream architecture algorithms that enable simultaneous processing of multiple conversational streams.",
+      "The algorithmic innovations allow the hearing aid to track and enhance multiple speakers in real-time while maintaining independent background noise management."
+    ],
+    takeaways: [
+      "Split processing enables independent speech and noise channel management.",
+      "Multi-stream algorithms track multiple speakers simultaneously.",
+      "Real-time processing maintains responsiveness to dynamic conversation changes."
+    ],
+    downloadUrl: "https://hearingreview.com/inside-hearing/research/augmenting-split-processing-with-a-multi-stream-architecture-algorithm"
+  },
+  27: {
+    subtitle: "Real-world assessment of Signia IX with RealTime Conversation Enhancement",
+    body: [
+      "This comprehensive field study evaluated Signia IX hearing aids in authentic real-world listening environments, tracking wearer satisfaction and reported benefit over extended wearing periods.",
+      "Results demonstrate that the laboratory-validated benefits of RealTime Conversation Enhancement translate consistently to real-world benefits that wearers recognize and value."
+    ],
+    takeaways: [
+      "Laboratory benefits replicate successfully in real-world use.",
+      "Wearers report significant subjective improvement in group conversation ability.",
+      "Extended field trial data confirms sustained benefit over time."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-03_white-paper_real-world-assessment-of-signia-ix.pdf?rev=3269196c94b847e0838e70708cc9dca4/"
+  },
+  28: {
+    subtitle: "New study reveals Signia IX outshines competitors in group conversations",
+    body: [
+      "This headline-making study provides definitive evidence that Signia IX significantly outperforms leading competitor hearing aids specifically in group conversation scenarios—the most important real-world use case.",
+      "The research validates years of Signia's technological development focused specifically on addressing the group conversation challenge that hearing aid wearers identify as their #1 need."
+    ],
+    takeaways: [
+      "Definitive evidence of Signia IX superiority in group conversations.",
+      "Addresses the #1 real-world challenge identified by hearing aid wearers.",
+      "Consistent performance advantage across multiple competitor platforms."
+    ],
+    downloadUrl: "https://www.youtube.com/watch?v=HTsiTKW1lI8"
+  },
+  29: {
+    subtitle: "Multi-stream architecture for improved conversation performance",
+    body: [
+      "This foundational technical publication explains the core algorithmic advantage of Signia's multi-stream architecture approach and how it delivers superior performance in multi-talker scenarios.",
+      "The paper provides detailed analysis of how parallel processing streams enable the hearing aid to respond dynamically to changing conversation dynamics and speaker positions."
+    ],
+    takeaways: [
+      "Multi-stream architecture enables responsive dynamic processing.",
+      "Parallel processing improves handling of multiple concurrent speakers.",
+      "Architecture fundamentally supports real-time conversation enhancement."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-11_white-paper_signia-ax-handsfree-callcontrol.pdf?rev=669ed67bbad1460abd52caf511efe275/"
+  },
+
+  // PAGE 3 - Augmented Xperience Platform
+  31: {
+    subtitle: "Unlocking quality of life benefits through firmware and apps",
+    body: [
+      "This research explores how firmware updates and mobile app features expand the functional capabilities of hearing aids beyond core amplification, enabling wearers to optimize their listening experience.",
+      "The study documents how additional features like remote control, environmental adaptability, and personalized sound preferences significantly enhance wearer satisfaction and real-world outcomes."
+    ],
+    takeaways: [
+      "Firmware and app features meaningfully expand hearing aid utility.",
+      "User customization options increase long-term wearer satisfaction.",
+      "Technology beyond core amplification drives positive health outcomes."
+    ],
+    downloadUrl: "https://hearingreview.com/hearing-products/hearing-aids/unlocking-quality-of-life-benefits-through-firmware-and-apps"
+  },
+  32: {
+    subtitle: "AI-based fine-tuning: How Signia Assistant improves wearer acceptance",
+    body: [
+      "Signia Assistant uses artificial intelligence to analyze wearer behavior and automatically optimize hearing aid settings based on real-world use patterns and wearer responses.",
+      "Data shows that AI-based fine-tuning improves initial wearer acceptance rates and reduces the need for multiple in-clinic adjustment visits during the acclimation period."
+    ],
+    takeaways: [
+      "AI-based optimization accelerates wearer acclimation period.",
+      "Automatic fine-tuning reduces need for multiple clinic visits.",
+      "Intelligent adaptation improves early satisfaction metrics."
+    ],
+    downloadUrl: "https://www.audiologyonline.com/articles/ai-based-fine-tuning-signia-28555"
+  },
+  33: {
+    subtitle: "Upgraded eWindScreen and improved AX Soundscape Processing",
+    body: [
+      "This technical backgrounder describes enhancements to Signia AX's wind noise reduction (eWindScreen) and comprehensive soundscape processing, delivering improved performance in outdoor and complex acoustic environments.",
+      "The upgrades maintain natural sound quality while providing more aggressive wind noise reduction and better preservation of environmental context."
+    ],
+    takeaways: [
+      "Enhanced wind noise reduction for outdoor activities.",
+      "Improved soundscape processing maintains environmental context.",
+      "Advanced algorithms reduce artifacts and distortion in complex environments."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2023/2023-03_backgrounder_ewindscreen_soundscape-processing.pdf?rev=40142ab496d34720bcf53e98e65eb373/"
+  },
+  34: {
+    subtitle: "HandsFree and CallControl in Signia AX deliver a great phone experience",
+    body: [
+      "This study evaluates Signia AX's HandsFree and CallControl features, enabling seamless phone conversations without needing to remove hearing aids or use speaker phone.",
+      "Research demonstrates that these connectivity features significantly improve phone call quality and accessibility for hearing aid wearers in both personal and professional settings."
+    ],
+    takeaways: [
+      "HandsFree feature enables natural phone conversations.",
+      "CallControl provides intuitive conversation management.",
+      "Features significantly improve accessibility and social connectivity."
+    ],
+    downloadUrl: "https://hearingreview.com/hearing-products/hearing-aids/psap/preferences-with-a-hearing-aid-headset-mode"
+  },
+  35: {
+    subtitle: "Signia AX HandsFree and CallControl: A dream to stream",
+    body: [
+      "This comprehensive white paper explores the streaming architecture that enables Signia AX HandsFree and CallControl features, detailing how hearing aids can seamlessly connect to phones and other devices.",
+      "The technology provides effortless connectivity that feels natural to users, allowing phone conversations and media streaming to feel like part of the hearing aid experience."
+    ],
+    takeaways: [
+      "Seamless phone and media streaming integration.",
+      "Natural user experience matches modern device expectations.",
+      "Architecture enables future connectivity enhancements."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-11_white-paper_signia-ax-handsfree-callcontrol.pdf?rev=669ed67bbad1460abd52caf511efe275/"
+  },
+  36: {
+    subtitle: "Measuring steps at the ear: How My Steps improves accuracy",
+    body: [
+      "Signia's My Steps feature uses hearing aid ear-mounted sensors to measure steps and physical activity, providing an alternative perspective on wellness that complements traditional wearable fitness trackers.",
+      "The research validates that ear-mounted sensors provide comparable accuracy to traditional wrist-worn activity trackers while offering additional contextual health information."
+    ],
+    takeaways: [
+      "Ear-mounted sensors provide accurate step counting.",
+      "Hearing aids serve as comprehensive wellness platforms.",
+      "Activity tracking integrates naturally with hearing aid experience."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_white-paper_measuring-steps-at-the-ear-my-steps.pdf?rev=da8047bc6a7142a685bb66e1a1e23e58/"
+  },
+  37: {
+    subtitle: "Improving general health with My WellBeing",
+    body: [
+      "Signia's My WellBeing feature extends health monitoring beyond hearing and activity, providing wearers with comprehensive wellness insights and health-related recommendations.",
+      "The feature demonstrates how hearing aids can contribute to broader health and wellness management, supporting holistic wearer health outcomes."
+    ],
+    takeaways: [
+      "Hearing aids contribute to comprehensive wellness monitoring.",
+      "Health insights support proactive health management.",
+      "Integrated health data improves overall wearer outcomes."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_white-paper_my-wellbeing.pdf?rev=84fc1c0378dc40358174cec0086f918f/"
+  },
+  38: {
+    subtitle: "Signia AX split processing: Technological advantages",
+    body: [
+      "This technical deep dive explains Signia AX's split processing technology—the core architectural innovation that separates speech from background sound, enabling independent processing of each channel.",
+      "The paper details how split processing provides superior sound quality and speech clarity compared to conventional single-stream processing in complex acoustic environments."
+    ],
+    takeaways: [
+      "Split processing enables independent channel optimization.",
+      "Speech clarity improves through dedicated processing pathways.",
+      "Architecture foundation enables advanced features and future innovations."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-06_white-paper_evidence-supports-advantages-of-signia-ax-split-processing.pdf?rev=385e18b71b0e46e7a1b1c6e3fccf153e/"
+  },
+  39: {
+    subtitle: "Auto EchoShield AX: Eliminating feedback and optimization",
+    body: [
+      "Signia AX's Auto EchoShield feature automatically detects and eliminates feedback before it becomes audible to the wearer, providing a cleaner listening experience without manual intervention.",
+      "The algorithm achieves superior feedback management through predictive processing that addresses potential feedback situations proactively."
+    ],
+    takeaways: [
+      "Automatic feedback elimination improves listening experience.",
+      "Predictive processing prevents feedback before occurrence.",
+      "Transparent technology improves user experience without user effort."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_white-paper_upgrading-the-performance-of-signia-ax.pdf?rev=e248da8d54b84ddf8590dda94065549c/"
+  },
+
+  // PAGE 4 - Augmented Xperience Features & Xperience Platform
+  41: {
+    subtitle: "HandsFree for iOS: Backgrounder and technical overview",
+    body: [
+      "This backgrounder explains the technical requirements and capabilities of Signia AX HandsFree connectivity with iOS devices, enabling hands-free phone control and call management.",
+      "The feature provides seamless integration with Apple devices, allowing wearers to answer, end, and switch calls directly from their hearing aids."
+    ],
+    takeaways: [
+      "Seamless iOS device integration.",
+      "Direct hearing aid call management without phone handling.",
+      "Natural, intuitive user experience for modern smartphone users."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_backgrounder_signia-ax_handsfree-ios.pdf?rev=3d08dd584d3c4d0bac879e9ac987a684/"
+  },
+  42: {
+    subtitle: "Signia AX Own Voice Processing 2.0: Technical backgrounder",
+    body: [
+      "Own Voice Processing 2.0 represents an evolution of Signia's exclusive technology that selectively reduces the loudness of the wearer's own voice while maintaining normal perception of others' voices.",
+      "The enhanced algorithm provides more precise own-voice detection and more natural sound quality across diverse speaking styles and acoustic environments."
+    ],
+    takeaways: [
+      "Exclusive own voice detection and processing technology.",
+      "Improved naturalness in own-voice perception.",
+      "Critical feature for comfortable hearing aid wearing."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_backgrounder_signia-ax_ovp-20.pdf?rev=e1434a2bf52c449b8d6a3825aad0dc5e/"
+  },
+  43: {
+    subtitle: "Auto EchoShield: Automatic feedback elimination backgrounder",
+    body: [
+      "This backgrounder explains how Auto EchoShield works to automatically detect and eliminate feedback before it becomes audible, providing a transparent hearing aid experience.",
+      "The technology represents a significant user experience improvement by eliminating one of the most common hearing aid challenges without requiring user intervention."
+    ],
+    takeaways: [
+      "Automatic feedback detection and elimination.",
+      "Transparent technology improves daily experience.",
+      "Reduces common frustration points in hearing aid use."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_backgrounder_signia-ax_auto-echoshield.pdf?rev=0af5a107ca154f2eb6e642b1bb63db42/"
+  },
+  44: {
+    subtitle: "Battery solutions and rechargeable technology comparison",
+    body: [
+      "This white paper compares traditional disposable hearing aid batteries with modern rechargeable battery technology, documenting the environmental, economic, and user experience advantages of rechargeable systems.",
+      "The research demonstrates that rechargeable hearing aids provide superior long-term value and convenience while reducing environmental waste."
+    ],
+    takeaways: [
+      "Rechargeable batteries reduce environmental impact.",
+      "Superior long-term cost economics versus disposable batteries.",
+      "Enhanced user convenience with simplified battery management."
+    ],
+    downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2021/2021-12_white-paper_comparison-of-battery-solutions-for-hearing-aids.pdf?rev=72a2cde9a9374876a25148736fad0abd/"
+  },
+  45: {
+    subtitle: "Split-processing technological breakthroughs",
+    body: [
+      "This journal paper documents the algorithmic breakthroughs enabling Signia's split-processing technology, which separates speech and background sound for independent optimization.",
+      "The research details novel signal processing approaches that enable simultaneous optimization of speech clarity and background sound quality without mutual interference."
+    ],
+    takeaways: [
+      "Breakthrough algorithms enable independent channel processing.",
+      "Superior signal-to-noise ratio in complex environments.",
+      "Foundational technology for future feature development."
+    ],
+        downloadUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4111442/"
+
+  },
+  46: {
+    subtitle: "Xperience super powers: Hero features and capabilities",
+    body: [
+      "This white paper highlights the most impactful features of the Xperience platform, positioning hearing aids as comprehensive health and wellness devices beyond traditional amplification.",
+      "The document showcases how Xperience's features combine to deliver superior overall user experience and measurable health benefits."
+    ],
+    takeaways: [
+      "Comprehensive platform delivers multiple complementary benefits.",
+      "Hero features address key wearer needs and desires.",
+      "Hearing aids become central to overall health management."
+    ],
+        downloadUrl: "https://youtu.be/kSB6Gv2yijU"
+
+  },
+  47: {
+    subtitle: "TeleCare: Improving wearer engagement and outcomes",
+    body: [
+      "Signia TeleCare enables remote hearing aid adjustments and consultations with hearing care professionals without requiring in-person clinic visits, improving accessibility and wearer engagement.",
+      "Research demonstrates that TeleCare increases wearer satisfaction by providing convenient support access and enabling faster problem resolution."
+    ],
+    takeaways: [
+      "Remote support improves accessibility for dispersed users.",
+      "Faster problem resolution increases satisfaction metrics.",
+      "Enables better support continuity across geographic areas."
+    ],
+    downloadUrl: "https://www.audiologyonline.com/articles/signia-telecare-hearing-aid-acceptance-26463"
+  },
+  48: {
+    subtitle: "Augmented Focus: Concentration and clarity backgrounder",
+    body: [
+      "Signia's Augmented Focus feature enables wearers to narrow the directionality window to focus exclusively on forward-facing speech, improving clarity in multi-speaker environments.",
+      "This feature is particularly valuable in situations like classroom lectures, presentations, or one-on-one conversations where the wearer wants to focus attention specifically forward."
+    ],
+    takeaways: [
+      "Narrow focus improves clarity in forward speech situations.",
+      "Enables wearer control over directional focus.",
+      "Addresses specific challenging listening scenarios."
+    ],
+        downloadUrl: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2021/2021-05_backgrounder_signia-ax-augmented-focus.pdf?rev=67e4145b07014776a21849d0b6798e7e/"
+
+  },
+  49: {
+    subtitle: "Real-world listening survey: Augmented Xperience wearer satisfaction",
+    body: [
+      "This comprehensive survey of Signia AX wearers documents reported satisfaction, benefit, and overall quality of life improvements compared to previous hearing aid experiences.",
+      "The research validates that the technical features and technological advances of Augmented Xperience translate to meaningful real-world benefit that wearers recognize and value."
+    ],
+    takeaways: [
+      "High reported satisfaction with Augmented Xperience features.",
+      "Measurable improvement in reported quality of life.",
+      "Technical advantages translate to real-world wearer benefit."
+    ],
+    downloadUrl: "https://www.audiologyonline.com/articles/improving-speech-understanding-in-noisy-29273"
   }
 };
 
@@ -87,70 +500,48 @@ export default function BlogPage() {
 
   const blogDatabase: Record<number, any[]> = {
     1: [
-      { id: 11, title: "Signia IX enhances the brain’s response to speech sounds in noise", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2026/2026-02-03-eeg-evaluation-of-signia-ix-1920x1080.jpeg" },
-      { id: 12, title: "Binaural OneMic Directionality 2.0 delivers 5 times speech enhancement", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/insio-chargego-ix/insio-charge-go-cic-ix_conversation_1920x1080.jpg" },
-      { id: 13, title: "Large-scale data confirm: Bluetooth Classic benefits Android users", topic: "Integrated Xperience", type: "Data insights", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-11-data-insights-bct-android-streaming-1920x1080.png" },
+      { id: 11, title: "Signia IX enhances the brain's response to speech sounds in noise and reduces listening effort", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2026/2026-02-03-eeg-evaluation-of-signia-ix-1920x1080.jpeg" },
+      { id: 12, title: "Binaural OneMic Directionality 2.0 delivers 5 times speech enhancement in noise versus competitors", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/insio-chargego-ix/insio-charge-go-cic-ix_conversation_1920x1080.jpg" },
+      { id: 13, title: "Large-scale data confirm: Bluetooth Classic benefits Android smartphone users", topic: "Integrated Xperience", type: "Data insights", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-11-data-insights-bct-android-streaming-1920x1080.png" },
       { id: 14, title: "Own Voice Processing 2.0 linked to 23% fewer returns", topic: "Integrated Xperience", type: "Data insights", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-11-data-insights-ovp-return-rates-1920x1080.png" },
       { id: 15, title: "Silk Charge&Go IX - the discreet ready-to-wear CIC loved by wearers", topic: "Integrated Xperience", type: "Data insights", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-10-silk-charge-go-ix-soundwave-1920x1080.jpg" },
-      { id: 16, title: "Directionality in single-microphone hearing aids: Speech enhancement", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-10-directional-in-single-microphone-16-9.png" },
-      { id: 17, title: "86% of participants performed better with Signia IX in noisy group", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/pure-chargego-bct-ix/pure-charge-go-bct-ix_congress-53927_group-conversation-3_1920x1080.jpg" },
+      { id: 16, title: "Directionality in single-microphone hearing aids: Speech enhancement with discretion", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2025/2025-10-directional-in-single-microphone-16-9.png" },
+      { id: 17, title: "86% of participants performed better with Signia IX in noisy group conversations", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/pure-chargego-bct-ix/pure-charge-go-bct-ix_congress-53927_group-conversation-3_1920x1080.jpg" },
       { id: 18, title: "Beyond the lab: Signia IX improves real-world busy group conversations", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/pure-chargego-bct-ix/pure-charge-go-bct-ix_congress-53981_group-conversation-2_1920x1080.jpg" },
-      { id: 19, title: "Conversations in noise: Multi-stream architecture vs. deep neural network", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-12_conversations-in-noise_16-9.jpg" }
+      { id: 19, title: "Conversations in noise: Multi-stream architecture vs. deep neural network approach", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-12_conversations-in-noise_16-9.jpg" }
     ],
     2: [
-        { id: 21, title: "Signia IX understanding vs AI competitor", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/active-ix/active-ix_group-laughing_1920x1080.jpg" },
-        { id: 22, title: "Signia IX twice the enhancement benefit", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-with-kids-cheering_1920x1080.jpg" },
-        { id: 23, title: "Multi-stream architecture improvement", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-09_improving-rtce-with-multi-stream_16-9.jpg" },
-        { id: 24, title: "Hearing at the mall food court", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/stock/food-court_1920x1080.jpg" },
-        { id: 25, title: "Overcoming stigma complexities", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/styletto-ix/styletto-ix_taking-out-of-charger_1920x1080.jpg" },
-        { id: 26, title: "Augmenting split processing", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-talking-to-kids_1920x1080.jpg" },
-        { id: 27, title: "Real-world assessment IX with RTCE", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-with-kids-circle_1920x1080.jpg" },
-        { id: 28, title: "Study: IX outshines competitors", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-talking-to-kids_1920x1080.jpg" },
-        { id: 29, title: "Improved Conversation Performance", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_live-auditory-space_16-9.jpg" }
+        { id: 21, title: "Signia IX with pioneering multi-stream technology delivers 22% better speech understanding", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/active-ix/active-ix_group-laughing_1920x1080.jpg" },
+        { id: 22, title: "Signia IX delivers more than twice the speech enhancement benefit in noisy group conversation", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-with-kids-cheering_1920x1080.jpg" },
+        { id: 23, title: "Improving the real-world conversation experience with a multi-stream architecture", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2024/2024-09_improving-rtce-with-multi-stream_16-9.jpg" },
+        { id: 24, title: "Hearing at the mall: Multibeam processing improves group conversations in real-world environment", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/stock/food-court_1920x1080.jpg" },
+        { id: 25, title: "Accentuating the positive: Overcoming stigma through thoughtful product design", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/styletto-ix/styletto-ix_taking-out-of-charger_1920x1080.jpg" },
+        { id: 26, title: "Augmenting split processing with a multi-stream architecture algorithm", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-talking-to-kids_1920x1080.jpg" },
+        { id: 27, title: "Real-world assessment of Signia Integrated Xperience with RealTime Conversation Enhancement", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-with-kids-circle_1920x1080.jpg" },
+        { id: 28, title: "New study reveals Signia IX outshines competitors in group conversations", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_coach-talking-to-kids_1920x1080.jpg" },
+        { id: 29, title: "Multi-Stream Architecture for Improved Conversation Performance", topic: "Integrated Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_live-auditory-space_16-9.jpg" }
     ],
     3: [
-        { id: 31, title: "Quality of life through firmware", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2023/2023-09-unlocking-quality-of-life_16-9.jpg" },
-        { id: 32, title: "AI fine-tuning acceptance", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/apps---telecare/signia-assistant/signia-assistant_ia-chat_1920x1080.jpg" },
-        { id: 33, title: "Upgraded eWindScreen processing", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2023/2023-03_ewindscreen_soundscape-processing_1920x1080.jpg" },
-        { id: 34, title: "HandsFree and CallControl Signia AX", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
-        { id: 35, title: "CallControl AX: Dream to stream", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
-        { id: 36, title: "My Steps accuracy metrics", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_measuring-steps-at-the-ear-my-steps_1920x1080.jpg" },
-        { id: 37, title: "General health with My WellBeing", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_my-wellbeing_1920x1080.jpg" },
-        { id: 38, title: "AX Split Processing advantages", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_see-through-chip_split-sound_1920x1080.jpg" },
-        { id: 39, title: "Auto EchoShield AX performance", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" }
+        { id: 31, title: "Unlocking quality of life benefits through firmware and apps", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2023/2023-09-unlocking-quality-of-life_16-9.jpg" },
+        { id: 32, title: "AI-based fine-tuning: How Signia Assistant improves wearer acceptance rates", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/apps---telecare/signia-assistant/signia-assistant_ia-chat_1920x1080.jpg" },
+        { id: 33, title: "Upgraded eWindScreen and improved AX Soundscape Processing", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2023/2023-03_ewindscreen_soundscape-processing_1920x1080.jpg" },
+        { id: 34, title: "HandsFree and CallControl in Signia AX deliver a great phone experience", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
+        { id: 35, title: "Signia AX HandsFree and CallControl: A dream to stream", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
+        { id: 36, title: "Measuring steps at the ear: How My Steps improves activity tracking accuracy", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_measuring-steps-at-the-ear-my-steps_1920x1080.jpg" },
+        { id: 37, title: "Improving general health with My WellBeing health monitoring", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-09_my-wellbeing_1920x1080.jpg" },
+        { id: 38, title: "Signia AX Split Processing advantages and technical architecture", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_see-through-chip_split-sound_1920x1080.jpg" },
+        { id: 39, title: "Auto EchoShield AX automatic feedback elimination performance", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" }
     ],
     4: [
-        { id: 41, title: "HandsFree for iOS Backgrounder", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
-        { id: 42, title: "AX Own Voice Processing 2.0", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_ovp-20_1920x1080.jpg" },
-        { id: 43, title: "Auto EchoShield Backgrounder", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_auto-echoshield_1920x1080.jpg" },
-        { id: 44, title: "Battery solutions comparison", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" },
-        { id: 45, title: "Split-processing breakthroughs", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_see-through-chip_split-sound_blue-bg_1920x1080.jpg" },
-        { id: 46, title: "Xperience Super Power heroes", topic: "Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/xperience/motion-x/motion-sp-x_hero_image-replacement_v2_1920x1080.jpg" },
-        { id: 47, title: "TeleCare wearer engagement", topic: "TeleCare", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2020/2020-02_user-engagement-with-telecare_16-9.jpg" },
-        { id: 48, title: "Augmented Focus clarity", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" },
-        { id: 49, title: "Real-world listening AX survey", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_augmented-focus_1920x1080.jpg" }
-    ],
-    5: [
-        { id: 51, title: "Tinnitus relief static therapy", topic: "Tinnitus", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/tinnitus/tinnitus-relief_1920x1080.jpg" },
-        { id: 52, title: "CROS and BiCROS deafness solutions", topic: "CROS", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/cros/cros-solution_1920x1080.jpg" },
-        { id: 53, title: "Acoustic-Motion Sensors Shift", topic: "Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/xperience/sensors_1920x1080.jpg" },
-        { id: 54, title: "TeleCare 3.0 Remote Tuning", topic: "TeleCare", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/apps---telecare/telecare-3_0_1920x1080.jpg" },
-        { id: 55, title: "Styletto: A design era", topic: "Styletto", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/styletto/styletto_hero_1920x1080.jpg" },
-        { id: 56, title: "Rechargeable Lithium-ion solutions", topic: "Charge&Go", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/charge-go/lithium-ion-battery_1920x1080.jpg" },
-        { id: 57, title: "Narrow Directionality proven", topic: "Binax", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/binax/directionality_1920x1080.jpg" },
-        { id: 58, title: "Android ASHA streaming tech", topic: "Connectivity", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/accessories/streamline-mic/streamline-mic_1920x1080.jpg" },
-        { id: 59, title: "Own Voice Processing 2.0 Technical", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/ovp-tech_1920x1080.jpg" }
-    ],
-    6: [
-        { id: 61, title: "Silk X: In-the-ear discretion", topic: "Discreet", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/silk/silk-x_1920x1080.jpg" },
-        { id: 62, title: "Motion X: Rechargeable BTE", topic: "Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/motion/motion-x_1920x1080.jpg" },
-        { id: 63, title: "OVP 2.0 Technical results", topic: "Integrated Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ix/platform/signia-ix_live-auditory-space_16-9.jpg" },
-        { id: 64, title: "Signia AX: Split-Processing", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/split-processing_1920x1080.jpg" },
-        { id: 65, title: "Augmented Focus: Background", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/split-processing_1920x1080.jpg" },
-        { id: 66, title: "TeleCare wearer engagement", topic: "TeleCare", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/apps---telecare/signia-telecare_1920x1080.jpg" },
-        { id: 67, title: "Styletto AX: Stream and charge", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/styletto/styletto-ax_1920x1080.jpg" },
-        { id: 68, title: "Signia Assistant: Personalized care", topic: "Apps", type: "Data insights", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/apps---telecare/signia-assistant_1920x1080.jpg" },
-        { id: 69, title: "AX Connectivity: TV to Smartphone", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/images/products/accessories/connectivity-streamers_1920x1080.jpg" }
+        { id: 41, title: "HandsFree for iOS: Backgrounder and technical overview", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_handsfree-ios_1920x1080.jpg" },
+        { id: 42, title: "Signia AX Own Voice Processing 2.0: Technical backgrounder", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_ovp-20_1920x1080.jpg" },
+        { id: 43, title: "Auto EchoShield: Automatic feedback elimination backgrounder", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2022/2022-05_signia-ax_auto-echoshield_1920x1080.jpg" },
+        { id: 44, title: "Battery solutions and rechargeable technology comparison", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" },
+        { id: 45, title: "Split-processing technological breakthroughs and innovations", topic: "Augmented Xperience", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_see-through-chip_split-sound_blue-bg_1920x1080.jpg" },
+        { id: 46, title: "Xperience Super Power: Hero features and capabilities", topic: "Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/xperience/motion-x/motion-sp-x_hero_image-replacement_v2_1920x1080.jpg" },
+        { id: 47, title: "TeleCare: Improving wearer engagement and remote support outcomes", topic: "TeleCare", type: "Journal paper", img: "https://cdn.signia-pro.com/-/media/signia/global/signia-library/2020/2020-02_user-engagement-with-telecare_16-9.jpg" },
+        { id: 48, title: "Augmented Focus: Concentration and clarity backgrounder", topic: "Augmented Xperience", type: "Backgrounder", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/brand/signia_soundwave_ax_1920x1080.jpg" },
+        { id: 49, title: "Real-world listening survey: Augmented Xperience wearer satisfaction", topic: "Augmented Xperience", type: "White paper", img: "https://cdn.signia-pro.com/-/media/signia/global/images/campaigns/signia-ax/platform/signia-ax_augmented-focus_1920x1080.jpg" }
     ]
   };
 
