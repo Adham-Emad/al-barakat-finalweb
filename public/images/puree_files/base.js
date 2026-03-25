@@ -10,7 +10,7 @@ var _yt_player={};(function(g){var window=this;/*
 */
 /*
 
- Copyright Google LLC All Rights Reserved.
+ Copyright Google LLC .
 
  Use of this source code is governed by an MIT-style license that can be
  found in the LICENSE file at https://angular.dev/license

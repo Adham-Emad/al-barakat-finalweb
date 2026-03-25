@@ -123,23 +123,6 @@ export default function ChargingSolutionsPage() {
     },
   ]
 
-  const rextonChargers = [
-    {
-      name: "Rexton BiCore Portable Charger",
-      description: "Pocket-sized portable charger with power bank for on-the-go charging.",
-      compatible: "BiCore Charge&Go family",
-      image: "/images/Portable1-Charger-Pure_with-Pure-ChGo-IX_1920x1080.webp",
-      brand: "Rexton"
-    },
-    {
-      name: "Rexton BiCore Desktop Charger",
-      description: "Desktop charging solution with LED status indicators.",
-      compatible: "BiCore Charge&Go hearing aids",
-      image: "/images/Rexton-Reach-80-Hearing-Aid-charging-case.webp",
-      brand: "Rexton"
-    },
-  ]
-
   const batteries = [
     {
       name: "Signia Hearing Aid Batteries",
@@ -153,7 +136,7 @@ export default function ChargingSolutionsPage() {
 
   const accessories = [
     {
-      name: "Signia TV Sound",
+      name: "TV Sound",
       description: "Stream sound directly from your TV to your Signia hearing aids via Bluetooth. Enjoy television with crystal-clear audio.",
       image: "/images/tvsound.jpeg",
       brand: "Signia"
@@ -173,6 +156,48 @@ export default function ChargingSolutionsPage() {
     },
   ]
 
+  const rextonChargers = [
+  {
+    name: "Charging Station R / B",
+    description: "This stationary charger is a very stable and easy to use unit, with a robust design and construction.",
+    features: [
+      "Charges in 4 hours",
+      "30-minute fast charging",
+      "Easy insertion/removal of aids",
+      "Automatic on/off",
+      "Fixed charging cable",
+      "Built in magnet holds hearing aids in place"
+    ],
+    compatible: "Reach R-Li & R-Li T, BiCore R-Li & R-Li T, B-Li",
+    image: "https://cdn.rexton.com/-/media/rexton/global/images/products/accessories/chargers/charging-station-r_1600x1067.jpg?rev=e1b4ae7ac03641a89d2cc7a304fce011&extension=webp&hash=E527BA8CD79B747DC7F0B9358FEDA314",
+    href: "/booking"
+  },
+  {
+    name: "Custom Charger Station",
+    description: "Featuring a new magnetic resonance charging technology, it offers optimal charging performance and ease of use with its intuitive placement slots.",
+    features: [
+      "Easy and practical placement in charger",
+      "No integrated Li Ion cell",
+      "USB C charging port",
+      "Charges in 4 hours"
+    ],
+    compatible: "BiCore Custom Li",
+    image: "https://cdn.rexton.com/-/media/rexton/global/images/products/bicore/custom-li/custom_li_charger_black_open_lighton_1600x1067.png?rev=784bcca2fa564e67a9b50e1bc4180467&extension=webp&hash=E31BED8D313B3E17DAB42AA73BED5691",
+    href: "/booking"
+  },
+  {
+    name: "Cable Charger",
+    description: "Recharge at home or on the go. Plug in and power up with the handy cable-charger. Can recharge one or two hearing aids.",
+    features: [
+      "Handy charger, use at home or on the move",
+      "Simple to use just plug in, power up and away you go",
+      "One-charger-fits-all, a single solution across the portfolio"
+    ],
+    compatible: "ReCharge R-Li & B-Li, BiCore R-Li (T), Rugged B-Li M, M-Core B-Li P & HP",
+    image: "https://cdn.rexton.com/-/media/rexton/global/images/products/accessories/chargers/cable-charger_stand_recharge-r-li_angle_1600x1067.jpg?rev=ef658b4e78de4759bcd7467aac263bee&extension=webp&hash=A238C8B0B221AAEF94468B1E171F6CC8",
+    href: "/booking"
+  }
+];
   return (
     <div className="min-h-screen">
 
@@ -258,6 +283,8 @@ export default function ChargingSolutionsPage() {
   height={400}
   className="h-64 w-full object-cover transition-transform group-hover:scale-105"
 />
+
+
                 <CardContent>
                   <h3 className="mb-2 text-xl font-bold">{item.name}</h3>
                   <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
@@ -272,27 +299,58 @@ export default function ChargingSolutionsPage() {
         </div>
       </section>
 
-      {/* Rexton Chargers */}
-      <section className="py-12 md:py-20 bg-muted/50">
-        <div className="container mx-auto max-w-7xl px-4">
-          <h2 className="mb-8 text-3xl font-semibold text-center">Rexton Chargers</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {rextonChargers.map((item, i) => (
-              <Card key={i} className="group overflow-hidden transition-all hover:shadow-xl">
-                <img src={item.image} alt={item.name} className="h-64 w-full object-cover transition-transform group-hover:scale-105"/>
-                <CardContent>
-                  <h3 className="mb-2 text-xl font-bold">{item.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-                  <p className="text-sm font-semibold">Compatible with: {item.compatible}</p>
-                  <Button asChild variant="outline" size="sm" className="mt-4 w-full">
-                    <Link href="/booking">Try The Charging Solution</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      
+
+      {/* Rexton Chargers Section */}
+<section className="py-12 md:py-20 bg-muted/50">
+  <div className="container mx-auto max-w-7xl px-4">
+    <h2 className="mb-8 text-3xl font-semibold text-center">Rexton Chargers</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {rextonChargers.map((item, i) => (
+        <Card key={i} className="group overflow-hidden transition-all hover:shadow-xl flex flex-col bg-white">
+          
+          {/* الصورة - نفس مقاسات التصميم القديم */}
+          <Link href={item.href} className="block relative h-64 w-full overflow-hidden bg-white">
+            <img 
+              src={item.image} 
+              alt={item.name} 
+              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 p-6"
+            />
+          </Link>
+
+          <CardContent className="flex flex-col flex-grow p-6">
+            <h3 className="mb-2 text-xl font-bold leading-tight">{item.name}</h3>
+            <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
+            
+            {/* عرض النقط (Features) بشكل بسيط عشان مياخدش مساحة ضخمة */}
+            {item.features && (
+              <ul className="mb-6 space-y-2">
+                {item.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-sm text-slate-600">
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-[#00838f] shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {/* الجزء السفلي (Compatible + Button) */}
+            <div className="mt-auto pt-4">
+              <div className="p-3 bg-slate-50 rounded-lg mb-4">
+                <p className="text-[10px] font-bold text-[#00838f] uppercase tracking-wider mb-1">Compatible with</p>
+                <p className="text-xs font-semibold leading-tight">{item.compatible}</p>
+              </div>
+
+              <Button asChild variant="outline" size="sm" className="w-full transition-colors hover:bg-[#00838f] hover:text-white">
+                <Link href={item.href}>Try The Charging Solution</Link>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Batteries */}
       <section className="py-12 md:py-20">

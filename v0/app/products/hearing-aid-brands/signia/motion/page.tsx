@@ -406,7 +406,6 @@ export default function MotionPage() {
     </section>
       <footer className="border-t py-12">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 Al Barakat Hearing Centers. Official Signia Technology Partner.</p>
         </div>
       </footer>
     </div>

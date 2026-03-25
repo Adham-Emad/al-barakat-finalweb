@@ -565,7 +565,6 @@ export default function PureRICPage() {
       </section>
       <footer className="border-t py-12 text-center text-sm text-muted-foreground">
 
-        <p>© 2026 Al Barakat Hearing Centers. Official Signia Partner in KSA.</p>
 
       </footer>
 

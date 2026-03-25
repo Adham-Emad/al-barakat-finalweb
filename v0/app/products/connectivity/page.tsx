@@ -333,7 +333,7 @@ export default function SigniaAppPage() {
 </section>
 <footer className="border-t bg-background py-12">
         <div className="container mx-auto max-w-7xl px-4 text-center text-sm text-muted-foreground">
-          <p>© 2026 Al Barakat Hearing Centers. All rights reserved.</p>
+          <p></p>
         </div>
       </footer>
     </div>

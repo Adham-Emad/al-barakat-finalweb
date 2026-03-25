@@ -151,7 +151,6 @@ export default function ServicesPage() {
       <footer className="border-t bg-background py-12">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Al-Barakat Hearing Care Centers. All rights reserved.</p>
           </div>
         </div>
       </footer>

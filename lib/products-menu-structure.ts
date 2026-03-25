@@ -63,7 +63,7 @@ export const productsMenuStructure = {
           href: "/products/hearing-aid-technology/integrated-xperience",
         },
         { id: "augment-xp", label: "Augment Xperience", href: "/products/hearing-aid-technology/augment-xperience" },
-        { id: "reach-tech", label: "REACH Technology", href: "/products/hearing-aid-technology/reach-technology" },
+        //{ id: "reach-tech", label: "REACH Technology", href: "/products/hearing-aid-technology/reach-technology" },
         { id: "bicore-tech", label: "BI-CORE Technology", href: "/products/hearing-aid-technology/bi-core-technology" },
       ],
     },

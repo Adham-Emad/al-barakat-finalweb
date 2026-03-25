@@ -40,7 +40,7 @@ export default function RextonTypesPage() {
               </p>
             </div>
             <div className="relative h-[350px] w-full">
-              <Image src="/images/1122 Background Removed.png" alt="Rexton Collection" fill className="object-contain" />
+              <Image src="/images/Rexton-1.png" alt="Rexton Collection" fill className="object-contain" />
             </div>
           </div>
         </div>
@@ -210,7 +210,6 @@ Hearing losses from mild to severe can benefit from a RIC device, and thanks to 
       </section>
 
       <footer className="py-12 text-center text-slate-500 text-sm border-t">
-        <p>© 2024 Al Barakat Hearing Centers. Partnering with Rexton.</p>
       </footer>
     </div>
   )

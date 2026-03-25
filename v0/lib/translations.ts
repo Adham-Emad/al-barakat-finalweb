@@ -234,7 +234,7 @@ export const translations = {
     resources: "Resources",
     faq: "FAQ",
     blog: "Blog",
-    copyright: "© 2025 Al-Barakat Hearing Care Centers. All rights reserved.",
+    copyright: "",
   },
   ar: {
     // Navigation

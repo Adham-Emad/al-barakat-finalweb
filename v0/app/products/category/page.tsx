@@ -210,7 +210,6 @@ Hearing losses from mild to severe can benefit from a RIC device, and thanks to 
       </section>
 
       <footer className="py-12 text-center text-slate-500 text-sm border-t">
-        <p>© 2024 Al Barakat Hearing Centers. Partnering with Rexton.</p>
       </footer>
     </div>
   )

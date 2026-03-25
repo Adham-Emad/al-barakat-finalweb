@@ -124,30 +124,36 @@ export default function HearingTestPage() {
               <p className="text-sm text-muted-foreground">Your trusted partner in hearing health and wellness.</p>
             </div>
             <div>
-              <h4 className="mb-4 text-sm font-semibold">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <a href="/about" className="text-muted-foreground hover:text-foreground">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="/services" className="text-muted-foreground hover:text-foreground">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="/products" className="text-muted-foreground hover:text-foreground">
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="text-muted-foreground hover:text-foreground">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
+  <h4 className="mb-4 text-sm font-semibold">Quick Links</h4>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+        About Us
+      </a>
+    </li>
+    <li>
+      <a href="/services" className="text-muted-foreground hover:text-foreground transition-colors">
+        Services
+      </a>
+    </li>
+    <li>
+      <a href="/products" className="text-muted-foreground hover:text-foreground transition-colors">
+        Products
+      </a>
+    </li>
+    <li>
+      <a href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+        Contact
+      </a>
+    </li>
+    {/* سطر الكارير الجديد هنا */}
+    <li>
+      <a href="/careers" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+        Careers
+      </a>
+    </li>
+  </ul>
+</div>
             <div>
               <h4 className="mb-4 text-sm font-semibold">Resources</h4>
               <ul className="space-y-2 text-sm">
@@ -183,7 +189,6 @@ export default function HearingTestPage() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Al-Barakat Hearing Care Centers. All rights reserved.</p>
           </div>
         </div>
       </footer>

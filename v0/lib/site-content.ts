@@ -231,7 +231,7 @@ export const defaultSiteContent: SiteContent = {
     quickLinksTitle: "Quick Links",
     resourcesTitle: "Resources",
     contactTitle: "Contact",
-    copyright: "© 2025 Al-Barakat Hearing Care Centers. All rights reserved.",
+    copyright: "",
   },
 
   hearingHealth: {

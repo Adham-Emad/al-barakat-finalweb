@@ -1,4 +1,9 @@
 "use client"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+
+import 'swiper/css/pagination';
 import Image from "next/image"
 import Link from "next/link"
 import { MainNavigation } from "@/components/main-navigation"
@@ -35,7 +40,7 @@ const featuredProducts = [
   },
   {
     id: "styletto-ix",
-    name: "Signia Styletto IX",
+    name: "Signia Styletto",
     slug: "styletto-slim-ric",
     image: "/images/signia-styletto-ix.jpg",
     description: "Latest generation Styletto with advanced Integrated Xperience technology.",
@@ -57,7 +62,7 @@ const featuredProducts = [
   {
   id: "silk",
   name: "Signia Silk",
-  slug: "silk#charge-go", // Add the hash here
+  slug: "silk", // Add the hash here
   image: "/images/product-showcase-5.jpg",
   description: "Instant-fit, discreet hearing aids with natural sound quality.",
 },
@@ -147,6 +152,8 @@ export default function HomePage() {
       <HeroVideoSection />
 
       <PerfectSoundSection />
+    
+    <BannerSection />
 
       <section className="py-16 md:py-24">
         <div className="container mx-auto max-w-7xl px-4">
@@ -456,31 +463,34 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h4 className="mb-4 text-sm font-semibold">
-                <EditableText contentKey="footer.quickLinksTitle" defaultValue="Quick Links" as="span" />
-              </h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link>
-                </li>
-                <li>
-                  {/* التعديل السحري هنا عشان السكرول يشتغل علطول */}
-                  <a 
-                    href="#product-section" 
-                    onClick={handleFooterScroll}
-                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-                  >
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
-                </li>
-              </ul>
-            </div>
+  <h4 className="mb-4 text-sm font-semibold">
+    <EditableText contentKey="footer.quickLinksTitle" defaultValue="Quick Links" as="span" />
+  </h4>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">About Us</Link>
+    </li>
+    <li>
+      <Link href="/services" className="text-muted-foreground hover:text-foreground transition-colors">Services</Link>
+    </li>
+    <li>
+      <a 
+        href="#product-section" 
+        onClick={handleFooterScroll}
+        className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+      >
+        Products
+      </a>
+    </li>
+    <li>
+      <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</Link>
+    </li>
+    {/* سطر الكارير الجديد هنا */}
+    <li>
+      <Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">Careers</Link>
+    </li>
+  </ul>
+</div>
             
             <div>
               <h4 className="mb-4 text-sm font-semibold">
@@ -562,4 +572,50 @@ export default function HomePage() {
       </Dialog>
     </main>
   )
+}
+
+function BannerSection() {
+  // هنا المصفوفة بيبقى فيها كل صورة كـ Object عادي
+  // السويبر هيعرض صورة واحدة بس في كل سلايد
+  const slides = [
+    { id: 1, src: "/images/حي الروضة (1).png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
+    { id: 2, src: "/images/022.png", alt: "New Branch" },
+        { id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
+
+  ];
+
+  return (
+    <section className="w-full bg-white pt-10 pb-8">
+      <div className="container mx-auto max-w-7xl px-4">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={10} // مسافة صغيرة جداً بين السلايدات
+          slidesPerView={1} // صورة واحدة بس في كل مرة
+          loop={true}
+          autoHeight={true} // أهم خاصية: السويبر بيغير طوله حسب طول الصورة اللي معروضة
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{
+            clickable: true,
+          }}
+          // شلنا الـ height الثابتة خالص، وخليناه بس rounded
+          className="rounded-2xl overflow-hidden shadow-lg" 
+        >
+          {slides.map((slide) => (
+            <SwiperSlide key={slide.id}>
+              {/* أهم تعديل هنا: object-contain لعرض الصورة كاملة */}
+              {/* و max-h-[80vh] عشان الصورة متبقاش طويلة جداً على الشاشة (مثلاً 80% من طول الشاشة) */}
+              <div className="relative w-full h-auto flex items-center justify-center bg-gray-100/50">
+                <img
+                  src={slide.src}
+                  alt={slide.alt}
+                  // object-contain: الصورة كاملة هتظهر جوه الـ container
+                  className="w-auto h-auto max-w-full max-h-[80vh] object-contain transition-all duration-300"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+  );
 }

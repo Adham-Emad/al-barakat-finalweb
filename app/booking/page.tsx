@@ -246,7 +246,6 @@ export default function BookingPage() {
       <footer className="border-t bg-background py-12">
         <div className="container mx-auto max-w-7xl px-4">
           <div className="text-center text-sm text-muted-foreground">
-            <p>{t("copyright")}</p>
           </div>
         </div>
       </footer>

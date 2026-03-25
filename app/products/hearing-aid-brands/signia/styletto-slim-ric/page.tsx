@@ -190,7 +190,6 @@ export default function StylettoPage() {
 
       <footer className="border-t py-12">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2024 Al Barakat Hearing Centers. Premium Signia Provider.</p>
         </div>
       </footer>
     </div>

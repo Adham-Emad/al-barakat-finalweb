@@ -174,7 +174,7 @@ whileHover={{ y: -12, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)" }}         
       </section>
 
       <footer className="py-12 text-center text-slate-400 text-xs tracking-widest uppercase">
-        © 2026 Al Barakat Hearing Centers • All rights reserved
+         
       </footer>
     </div>
   )

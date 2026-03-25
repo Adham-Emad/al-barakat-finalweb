@@ -24,9 +24,11 @@ export default function SilkClient() {
   // ==========================================
   // HASH ROUTING LOGIC (Integrated)
   // ==========================================
+  // ==========================================
+  // HASH ROUTING LOGIC (Integrated)
+  // ==========================================
   useEffect(() => {
     const handleHashSwitch = () => {
-      // Check if URL ends with #charge-go
       if (window.location.hash === "#charge-go") {
         setActiveModel("silkix")
       } else if (window.location.hash === "#silkx") {
@@ -58,29 +60,7 @@ export default function SilkClient() {
     <div className="min-h-screen bg-white font-sans text-slate-900">
       <MainNavigation />
 
-      {/* 1. Tabs Selection */}
-      <section className="bg-white py-6 border-b sticky top-0 z-30 shadow-sm">
-        <div className="container mx-auto px-6 flex justify-center gap-4">
-          <button 
-            onClick={() => {
-              setActiveModel("silkx")
-              window.history.pushState(null, "", "#silkx")
-            }} 
-            className={`px-10 py-3 rounded-full font-bold transition-all ${activeModel === "silkx" ? "bg-primary text-white shadow-md scale-105" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
-          >
-            Silk X
-          </button>
-          <button 
-            onClick={() => {
-              setActiveModel("silkix")
-              window.history.pushState(null, "", "#charge-go")
-            }} 
-            className={`px-10 py-3 rounded-full font-bold transition-all ${activeModel === "silkix" ? "bg-primary text-white shadow-md scale-105" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
-          >
-            Silk Charge&Go IX
-          </button>
-        </div>
-      </section>
+     
 
       {/* ========================================================================= */}
       {/* SECTION: SILK X CONTENT */}
@@ -265,7 +245,7 @@ export default function SilkClient() {
       {activeModel === "silkix" && (
         <>
           {/* Hero IX */}
-          <section className="relative w-full h-[600px] overflow-hidden flex items-center">
+          <section id="charge-go" className="relative w-full h-[600px] overflow-hidden flex items-center">
             <img 
               src="https://cdn.signia.net/-/media/signia/global/images/campaigns/signia-ix/silk-chargego-ix/silk-ix_bouldering_group-conversation_ces_reddot_1920x1080.jpg" 
               className="absolute inset-0 w-full h-full object-cover" 

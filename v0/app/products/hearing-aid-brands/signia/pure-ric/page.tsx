@@ -339,7 +339,6 @@ Our experts at Al Barakat Hearing Centers across Saudi Arabia will help you choo
 
 <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
 
-<p>© 2024 Al Barakat Hearing Centers. Official Signia Partner in KSA.</p>
 
 </div>
 

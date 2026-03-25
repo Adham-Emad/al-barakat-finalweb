@@ -512,44 +512,53 @@ export default function HomePage() {
 
             {/* العمود الثاني: Quick Links */}
             <div>
-              <h4 className="mb-4 text-sm font-semibold">
-                <EditableText contentKey="footer.quickLinksTitle" defaultValue="Quick Links" as="span" />
-              </h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services"
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/products"
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+  <h4 className="mb-4 text-sm font-semibold">
+    <EditableText contentKey="footer.quickLinksTitle" defaultValue="Quick Links" as="span" />
+  </h4>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <Link
+        href="/about"
+        className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+      >
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/services"
+        className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+      >
+        Services
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/products"
+        className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+      >
+        Products
+      </Link>
+    </li>
+    <li>
+      <Link
+        href="/contact"
+        className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+      >
+        Contact
+      </Link>
+    </li>
+    {/* إضافة سطر الكارير الجديد هنا */}
+    <li>
+      <Link
+        href="/careers"
+        className="text-muted-foreground hover:text-foreground transition-colors duration-300"
+      >
+        Careers
+      </Link>
+    </li>
+  </ul>
+</div>
             
             {/* العمود الثالث: Resources */}
             <div>

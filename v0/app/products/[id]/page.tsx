@@ -146,30 +146,36 @@ export default async function ProductDetailPage(
               <p className="text-sm text-muted-foreground">Advanced Hearing Solutions</p>
             </div>
             <div>
-              <h4 className="mb-4 text-sm font-semibold">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/" className="text-muted-foreground hover:text-foreground">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-muted-foreground hover:text-foreground">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products" className="text-muted-foreground hover:text-foreground">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-muted-foreground hover:text-foreground">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+  <h4 className="mb-4 text-sm font-semibold">Quick Links</h4>
+  <ul className="space-y-2 text-sm">
+    <li>
+      <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
+        Home
+      </Link>
+    </li>
+    <li>
+      <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+        About Us
+      </Link>
+    </li>
+    <li>
+      <Link href="/products" className="text-muted-foreground hover:text-foreground transition-colors">
+        Products
+      </Link>
+    </li>
+    <li>
+      <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+        Contact
+      </Link>
+    </li>
+    {/* إضافة سطر الكارير هنا */}
+    <li>
+      <Link href="/careers" className="text-muted-foreground hover:text-foreground transition-colors">
+        Careers
+      </Link>
+    </li>
+  </ul>
+</div>
             <div>
               <h4 className="mb-4 text-sm font-semibold">Resources</h4>
               <ul className="space-y-2 text-sm">
@@ -205,7 +211,6 @@ export default async function ProductDetailPage(
             </div>
           </div>
           <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2025 Al-Barakat Hearing Care Centers. All rights reserved.</p>
           </div>
         </div>
       </footer>

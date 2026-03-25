@@ -30,6 +30,15 @@ export default function RootLayout({
               {children}
             </Suspense>
 
+           {/* --- Copyright Footer Section --- */}
+ <footer className="w-full py-16 text-center text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50">
+   <p className="mb-2">
+     © {new Date().getFullYear()} Al Barakat Hearing Centers. All rights reserved.
+   </p>
+   <p className="text-gray-500 font-medium">
+     VAT 300049401300003 | CR 1010068793
+   </p>
+ </footer>
             {/* --- Floating WhatsApp Button --- */}
             <a
               href="https://api.whatsapp.com/send/?phone=9668001248882"

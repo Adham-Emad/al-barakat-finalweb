@@ -1,10 +1,9 @@
 "use client"
-
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import {
   Menu,
   Calendar,
@@ -173,33 +172,45 @@ export function MainNavigation() {
             {/* Products & Accessories */}
             <ProductsMegaMenu />
 
-            {/* Company */}
-            <div className="relative group">
-              <button className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-accent/50 group-hover:bg-accent/50">
-                <EditableText contentKey="nav.companyMenu" defaultValue="Company" as="span" />
-                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
-              </button>
-              <div className="absolute left-0 top-full mt-0 w-96 bg-white rounded-lg shadow-lg z-50 p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-y-4">
-                <Link href="/about" className="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🏢</span>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">About Us</h4>
-                      <p className="text-sm text-gray-600">Learn about our mission, values, and commitment to hearing care</p>
-                    </div>
-                  </div>
-                </Link>
-                <Link href="/services" className="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🩺</span>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Services</h4>
-                      <p className="text-sm text-gray-600">Comprehensive hearing care services by certified audiologists</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
+          {/* Company */}
+<div className="relative group">
+  <button className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-accent/50 group-hover:bg-accent/50">
+    <EditableText contentKey="nav.companyMenu" defaultValue="Company" as="span" />
+    <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+  </button>
+  <div className="absolute left-0 top-full mt-0 w-96 bg-white rounded-lg shadow-lg z-50 p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 space-y-4">
+    <Link href="/about" className="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🏢</span>
+        <div>
+          <h4 className="font-semibold text-gray-900">About Us</h4>
+          <p className="text-sm text-gray-600">Learn about our mission, values, and commitment to hearing care</p>
+        </div>
+      </div>
+    </Link>
+    
+    <Link href="/services" className="block p-4 rounded-lg hover:bg-gray-50 transition-colors">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">🩺</span>
+        <div>
+          <h4 className="font-semibold text-gray-900">Services</h4>
+          <p className="text-sm text-gray-600">Comprehensive hearing care services by certified audiologists</p>
+        </div>
+      </div>
+    </Link>
+
+    {/* سكشن الـ Careers الجديد */}
+    <Link href="/careers" className="block p-4 rounded-lg hover:bg-gray-50 transition-colors border-t border-gray-50 pt-4">
+      <div className="flex items-start gap-3">
+        <span className="text-2xl">💼</span>
+        <div>
+          <h4 className="font-semibold text-gray-900 uppercase tracking-tight">Careers</h4>
+          <p className="text-sm text-gray-600 font-light">Join the Al-Barakat team and build your future with us</p>
+        </div>
+      </div>
+    </Link>
+  </div>
+</div>
 
             {/* Contact */}
             <div className="relative group">
@@ -287,7 +298,7 @@ export function MainNavigation() {
               </SheetTrigger>
               
               <SheetContent side="left" className="w-[340px] sm:w-[400px] p-0 border-r-0 bg-[#f8fafc] [&>button]:text-white [&>button]:top-5 [&>button]:right-5 [&>button]:z-50">
-                
+                <SheetTitle className="sr-only">Al-Barakat Navigation Menu</SheetTitle>
                 {/* Premium Teal Header */}
                 <div className="bg-[#00838f] p-6 pt-10 text-white flex items-center relative">
                   <div className="flex items-center gap-3">
@@ -477,7 +488,7 @@ export function MainNavigation() {
                               {/* Updated Technology Links */}
                               <Link href="/products/hearing-aid-technology/integrated-xperience" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-700 hover:text-[#00838f]"><div className="w-1.5 h-1.5 rounded-full bg-[#00838f]"/> Integrated Xperience</Link>
                               <Link href="/products/hearing-aid-technology/augment-xperience" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-700 hover:text-[#00838f]"><div className="w-1.5 h-1.5 rounded-full bg-[#00838f]"/> Augment Xperience</Link>
-                              <Link href="/products/hearing-aid-technology/reach-technology" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-700 hover:text-[#00838f]"><div className="w-1.5 h-1.5 rounded-full bg-[#00838f]"/> REACH Technology</Link>
+                              {/*<Link href="/products/hearing-aid-technology/reach-technology" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-700 hover:text-[#00838f]"><div className="w-1.5 h-1.5 rounded-full bg-[#00838f]"/> REACH Technology</Link>*/}
                               <Link href="/products/hearing-aid-technology/bi-core-technology" onClick={() => setIsOpen(false)} className="flex items-center gap-2 text-slate-700 hover:text-[#00838f]"><div className="w-1.5 h-1.5 rounded-full bg-[#00838f]"/> BI-CORE Technology</Link>
                             </div>
                           )}
@@ -499,21 +510,30 @@ export function MainNavigation() {
                   </div>
 
                   {/* 3. Company (Accordion) */}
-                  <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
-                    <button onClick={(e) => toggleMobileSection('company', e)} className="w-full flex items-center justify-between p-4 text-slate-800 font-semibold hover:bg-slate-50 transition-colors">
-                      <div className="flex items-center gap-4">
-                        <Building className="h-5 w-5 text-[#00838f]" />
-                        Company
-                      </div>
-                      <ChevronRight className={cn("h-5 w-5 text-slate-400 transition-transform", mobileExpanded === 'company' && "rotate-90")} />
-                    </button>
-                    <div className={cn("bg-[#f8fafc] border-t border-slate-100", mobileExpanded === 'company' ? "block" : "hidden")}>
-                      <div className="p-4 space-y-4">
-                        <Link href="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-slate-700 hover:text-[#00838f]"><div className="w-2 h-2 rounded-full bg-[#00838f]" /> About Us</Link>
-                        <Link href="/services" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-slate-700 hover:text-[#00838f]"><div className="w-2 h-2 rounded-full bg-[#00838f]" /> Services</Link>
-                      </div>
-                    </div>
-                  </div>
+<div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
+  <button onClick={(e) => toggleMobileSection('company', e)} className="w-full flex items-center justify-between p-4 text-slate-800 font-semibold hover:bg-slate-50 transition-colors">
+    <div className="flex items-center gap-4">
+      <Building className="h-5 w-5 text-[#00838f]" />
+      Company
+    </div>
+    <ChevronRight className={cn("h-5 w-5 text-slate-400 transition-transform", mobileExpanded === 'company' && "rotate-90")} />
+  </button>
+  <div className={cn("bg-[#f8fafc] border-t border-slate-100", mobileExpanded === 'company' ? "block" : "hidden")}>
+    <div className="p-4 space-y-4">
+      <Link href="/about" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-slate-700 hover:text-[#00838f]">
+        <div className="w-2 h-2 rounded-full bg-[#00838f]" /> About Us
+      </Link>
+      <Link href="/services" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-slate-700 hover:text-[#00838f]">
+        <div className="w-2 h-2 rounded-full bg-[#00838f]" /> Services
+      </Link>
+      
+      {/* السطر الجديد اللي ضفناه للكارير */}
+      <Link href="/careers" onClick={() => setIsOpen(false)} className="flex items-center gap-3 text-slate-700 hover:text-[#00838f]">
+        <div className="w-2 h-2 rounded-full bg-[#00838f]" /> Careers
+      </Link>
+    </div>
+  </div>
+</div>
 
                   {/* 4. Contact (Accordion) */}
                   <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">

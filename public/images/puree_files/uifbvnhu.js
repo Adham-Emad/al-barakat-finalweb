@@ -1,5 +1,5 @@
 !function(){!function(){window._xsd={s:null,p:0,save:function(){if(null!==window._xsd.s)localStorage.setItem("_xsd",window._xsd.s+"|"+window._xsd.p)},gwn:"_xgwuifbvnhu"}}(),function(){window[window._xsd.gwn]=function(){
-// Copyright 2012 Google Inc. All rights reserved.
+// Copyright 2012 Google Inc. .
  
  (function(w,g){w[g]=w[g]||{};
  w[g].e=function(s){return eval(s);};})(window,'google_tag_manager');

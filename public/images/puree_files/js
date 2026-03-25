@@ -1,6 +1,6 @@
 if(XMLHttpRequest.prototype.setAttributionReporting){XMLHttpRequest.prototype.setAttributionReporting = (function(setAttributionReporting) {return function() {try {setAttributionReporting.apply(this, arguments);} catch(e) {console.error(e);}}})(XMLHttpRequest.prototype.setAttributionReporting);}
 
-// Copyright 2012 Google Inc. All rights reserved.
+// Copyright 2012 Google Inc. .
  
 (function(){
 

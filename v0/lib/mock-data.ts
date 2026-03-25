@@ -113,7 +113,7 @@ export const initialContent: SiteContent = {
   footer: {
     brandName: "HearClear",
     tagline: "Advanced hearing solutions for a better life",
-    copyright: "© 2025 HearClear. All rights reserved.",
+    copyright: "",
   },
   purchaseModal: {
     title: "Contact for Purchase",

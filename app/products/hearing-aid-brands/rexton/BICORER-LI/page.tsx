@@ -335,7 +335,6 @@ export default function BiCoreRICPage() {
 
       <footer className="border-t py-12 bg-white">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2026 Al Barakat Hearing Centers. Official Signia Partner in KSA.</p>
         </div>
       </footer>
     </div>
