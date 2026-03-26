@@ -26,17 +26,54 @@ export default function BookingPage() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // 1. ضيف الـ State دي في أول الكومبوننت مع الباقي
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // 2. ده الـ handleSubmit الجديد
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // In a real app, this would send data to a server
-    console.log("[v0] Booking form submitted:", formData)
-    setSubmitted(true)
+    setIsSubmitting(true)
+
+    // نجيب بيانات الفرع المختار من ملف الداتا
+    const selectedBranchData = branches.find((b) => b.id === formData.branch)
+
+    if (!selectedBranchData) {
+      alert("Please select a branch first")
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      const response = await fetch("/api/send-booking", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          branchName: selectedBranchData.name,
+          branchEmail: selectedBranchData.email, // ده الميل اللي هيتبعتله نسخة (من الداتا اللي عندك)
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        const errorData = await response.json()
+        console.error("Mail Error:", errorData)
+        alert("Sorry, there was an error sending your request. Please try again.")
+      }
+    } catch (error) {
+      console.error("Connection Error:", error)
+      alert("Connection error. Please check your internet and try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  const handleChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
-
+  // 3. جزء الـ Success (if submitted) زي ما هو بس مع تعديل بسيط للتنسيق
   if (submitted) {
     return (
       <div className="min-h-screen">
@@ -51,7 +88,7 @@ export default function BookingPage() {
               </div>
               <h1 className="mb-4 text-3xl font-bold">{t("thankYou")}</h1>
               <p className="mb-6 text-lg text-muted-foreground">{t("thankYouDesc")}</p>
-              <div className="space-y-2 text-sm text-muted-foreground">
+              <div className="space-y-2 text-sm text-muted-foreground bg-slate-50 p-4 rounded-lg">
                 <p>
                   <strong>{t("selectedBranch")}:</strong> {branches.find((b) => b.id === formData.branch)?.name}
                 </p>
@@ -60,7 +97,12 @@ export default function BookingPage() {
                 </p>
               </div>
               <div className="mt-8">
-                <Button onClick={() => setSubmitted(false)}>{t("bookAnother")}</Button>
+                <Button onClick={() => {
+                  setSubmitted(false)
+                  setFormData({ name: "", email: "", phone: "", branch: "", service: "", message: "" })
+                }}>
+                  {t("bookAnother")}
+                </Button>
               </div>
             </CardContent>
           </Card>
@@ -177,9 +219,21 @@ export default function BookingPage() {
                       />
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg">
-                      {t("submitRequest")}
-                    </Button>
+                    <Button 
+  type="submit" 
+  className="w-full" 
+  size="lg" 
+  disabled={isSubmitting} // بيقفل الزرار أول ما يدوس عشان يمنع التكرار
+>
+  {isSubmitting ? (
+    <span className="flex items-center gap-2">
+      {/* اختيار اختياري: ممكن تضيف أنيميشن بسيط هنا */}
+      Sending...
+    </span>
+  ) : (
+    t("submitRequest")
+  )}
+</Button>
 
                     <p className="text-xs text-muted-foreground">{t("requiredFields")}</p>
                   </form>

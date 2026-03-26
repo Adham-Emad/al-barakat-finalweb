@@ -35,42 +35,42 @@ const featuredProducts = [
     id: "pure-ric",
     name: "Signia Pure RIC",
     slug: "pure-ric",
-    image: "/images/product-showcase-1.jpg",
+    image: "/images/Pure RIC.png",
     description: "Our smallest, invisible-in-canal solution for discreet daily wear.",
   },
   {
     id: "styletto-ix",
     name: "Signia Styletto",
     slug: "styletto-slim-ric",
-    image: "/images/signia-styletto-ix.jpg",
+    image: "/images/Styletto.png",
     description: "Latest generation Styletto with advanced Integrated Xperience technology.",
   },
   {
     id: "motion",
     name: "Signia Motion",
     slug: "motion",
-    image: "/images/product-showcase-3.jpg",
+    image: "/images/Motion.png",
     description: "Ultra-slim, award-winning design with motion sensor technology.",
   },
   {
     id: "insio",
     name: "Signia Insio Charge & Go Ax",
     slug: "insiogoax",
-    image: "/images/insiopro.png",
+    image: "/images/Insio.png",
     description: "Custom-made hearing aids designed for comfort and performance.",
   },
   {
   id: "silk",
   name: "Signia Silk",
   slug: "silk", // Add the hash here
-  image: "/images/product-showcase-5.jpg",
+  image: "/images/Silk.png",
   description: "Instant-fit, discreet hearing aids with natural sound quality.",
 },
   {
     id: "intuis",
     name: "Intuis 4",
     slug: "intuis4",
-    image: "/images/product-showcase-6.jpg",
+    image: "/images/Intuis4.png",
     description: "Reliable and easy-to-use hearing solution with durable design.",
   },
 ]
@@ -575,13 +575,25 @@ export default function HomePage() {
 }
 
 function BannerSection() {
-  // هنا المصفوفة بيبقى فيها كل صورة كـ Object عادي
-  // السويبر هيعرض صورة واحدة بس في كل سلايد
   const slides = [
-    { id: 1, src: "/images/newbranch.png", alt: "New Branch" },
-    //{ id: 2, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
-    //{ id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
-
+    { 
+      id: 1, 
+      src: "/images/تخطيط.png", 
+      alt: "New Branch Location",
+      href: "/booking" // ماب
+    },
+    { 
+      id: 2, 
+      src: "/images/roda2.png", 
+      alt: "Special Offer",
+      href: "https://maps.app.goo.gl/iBE8R3RYTgD7XhkF6" // صفحة جوه الموقع
+    },
+    { 
+      id: 3, 
+      src: "/images/hearing.png", 
+      alt: "Check Products",
+      href: "/booking" // صفحة تانية
+    },
   ];
 
   return (
@@ -589,28 +601,30 @@ function BannerSection() {
       <div className="container mx-auto max-w-7xl px-4">
         <Swiper
           modules={[Autoplay, Pagination]}
-          spaceBetween={10} // مسافة صغيرة جداً بين السلايدات
-          slidesPerView={1} // صورة واحدة بس في كل مرة
+          spaceBetween={10}
+          slidesPerView={1}
           loop={true}
-          autoHeight={true} // أهم خاصية: السويبر بيغير طوله حسب طول الصورة اللي معروضة
+          autoHeight={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          pagination={{
-            clickable: true,
-          }}
-          // شلنا الـ height الثابتة خالص، وخليناه بس rounded
+          pagination={{ clickable: true }}
           className="rounded-2xl overflow-hidden shadow-lg" 
         >
           {slides.map((slide) => (
             <SwiperSlide key={slide.id}>
-              {/* أهم تعديل هنا: object-contain لعرض الصورة كاملة */}
-              {/* و max-h-[80vh] عشان الصورة متبقاش طويلة جداً على الشاشة (مثلاً 80% من طول الشاشة) */}
               <div className="relative w-full h-auto flex items-center justify-center bg-gray-100/50">
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  // object-contain: الصورة كاملة هتظهر جوه الـ container
-                  className="w-auto h-auto max-w-full max-h-[80vh] object-contain transition-all duration-300"
-                />
+                {/* هنا خلينا الـ href يقرأ من الـ object نفسه */}
+                <a 
+                  href={slide.href} 
+                  target={slide.href.startsWith('http') ? "_blank" : "_self"} 
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  <img
+                    src={slide.src}
+                    alt={slide.alt}
+                    className="w-auto h-auto max-w-full max-h-[80vh] object-contain transition-all duration-300"
+                  />
+                </a>
               </div>
             </SwiperSlide>
           ))}
