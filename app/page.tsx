@@ -578,7 +578,7 @@ function BannerSection() {
   // هنا المصفوفة بيبقى فيها كل صورة كـ Object عادي
   // السويبر هيعرض صورة واحدة بس في كل سلايد
   const slides = [
-    { id: 1, src: "/images/حي الروضة (1).png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
+    { id: 1, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
     { id: 2, src: "/images/022.png", alt: "New Branch" },
         { id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
 
