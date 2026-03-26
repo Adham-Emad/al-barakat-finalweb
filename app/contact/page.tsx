@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import { useState } from "react"
 import { MainNavigation } from "@/components/main-navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,16 +9,54 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Send } from "lucide-react"
-import { useState } from "react"
 import { BranchesShowcase } from "@/components/branches-showcase"
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  // تعريف حالة البيانات في الفورم
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // دالة تحديث القيم عند الكتابة
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }))
+  }
+
+  // دالة إرسال الإيميل
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch("/api/send-contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        // تفريغ الفورم بعد النجاح
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" })
+        // إعادة زرار الإرسال لحالته بعد 5 ثواني
+        setTimeout(() => setSubmitted(false), 5000)
+      } else {
+        alert("Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      alert("Connection error. Please check your internet.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -53,36 +91,76 @@ export default function ContactPage() {
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
                         <Label htmlFor="firstName">First Name *</Label>
-                        <Input id="firstName" required placeholder="John" />
+                        <Input 
+                          id="firstName" 
+                          required 
+                          placeholder="John" 
+                          value={formData.firstName}
+                          onChange={(e) => handleChange("firstName", e.target.value)}
+                        />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="lastName">Last Name *</Label>
-                        <Input id="lastName" required placeholder="Doe" />
+                        <Input 
+                          id="lastName" 
+                          required 
+                          placeholder="Doe" 
+                          value={formData.lastName}
+                          onChange={(e) => handleChange("lastName", e.target.value)}
+                        />
                       </div>
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" type="email" required placeholder="john.doe@example.com" />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        required 
+                        placeholder="john.doe@example.com" 
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                      />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" type="tel" placeholder="+966 XX XXX XXXX" />
+                      <Input 
+                        id="phone" 
+                        type="tel" 
+                        placeholder="+966 XX XXX XXXX" 
+                        value={formData.phone}
+                        onChange={(e) => handleChange("phone", e.target.value)}
+                      />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="subject">Subject *</Label>
-                      <Input id="subject" required placeholder="How can we help you?" />
+                      <Input 
+                        id="subject" 
+                        required 
+                        placeholder="How can we help you?" 
+                        value={formData.subject}
+                        onChange={(e) => handleChange("subject", e.target.value)}
+                      />
                     </div>
 
                     <div className="space-y-2">
                       <Label htmlFor="message">Message *</Label>
-                      <Textarea id="message" required placeholder="Tell us more about your inquiry..." rows={5} />
+                      <Textarea 
+                        id="message" 
+                        required 
+                        placeholder="Tell us more about your inquiry..." 
+                        rows={5} 
+                        value={formData.message}
+                        onChange={(e) => handleChange("message", e.target.value)}
+                      />
                     </div>
 
-                    <Button type="submit" className="w-full" size="lg" disabled={submitted}>
-                      {submitted ? (
+                    <Button type="submit" className="w-full" size="lg" disabled={isSubmitting || submitted}>
+                      {isSubmitting ? (
+                        "Sending..."
+                      ) : submitted ? (
                         "Message Sent!"
                       ) : (
                         <>
