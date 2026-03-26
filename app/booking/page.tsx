@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import { useState } from "react"
 import { MainNavigation } from "@/components/main-navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -11,12 +11,13 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { branches } from "@/lib/branches-data"
 import { MapPin, Phone, Mail, Clock, CheckCircle2, Map } from "lucide-react"
-import { useState } from "react"
 import { useLanguage } from "@/lib/language-context"
 
 export default function BookingPage() {
   const { t } = useLanguage()
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,15 +27,16 @@ export default function BookingPage() {
     message: "",
   })
 
-  // 1. ضيف الـ State دي في أول الكومبوننت مع الباقي
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  // الدالة المسؤولة عن تحديث البيانات في الـ Form
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }))
+  }
 
-  // 2. ده الـ handleSubmit الجديد
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // نجيب بيانات الفرع المختار من ملف الداتا
+    // البحث عن بيانات الفرع المختار
     const selectedBranchData = branches.find((b) => b.id === formData.branch)
 
     if (!selectedBranchData) {
@@ -54,7 +56,7 @@ export default function BookingPage() {
           service: formData.service,
           message: formData.message,
           branchName: selectedBranchData.name,
-          branchEmail: selectedBranchData.email, // ده الميل اللي هيتبعتله نسخة (من الداتا اللي عندك)
+          branchEmail: selectedBranchData.email,
         }),
       })
 
@@ -73,7 +75,6 @@ export default function BookingPage() {
     }
   }
 
-  // 3. جزء الـ Success (if submitted) زي ما هو بس مع تعديل بسيط للتنسيق
   if (submitted) {
     return (
       <div className="min-h-screen">
@@ -88,7 +89,7 @@ export default function BookingPage() {
               </div>
               <h1 className="mb-4 text-3xl font-bold">{t("thankYou")}</h1>
               <p className="mb-6 text-lg text-muted-foreground">{t("thankYouDesc")}</p>
-              <div className="space-y-2 text-sm text-muted-foreground bg-slate-50 p-4 rounded-lg">
+              <div className="space-y-2 text-sm text-muted-foreground bg-slate-50 p-4 rounded-lg text-left">
                 <p>
                   <strong>{t("selectedBranch")}:</strong> {branches.find((b) => b.id === formData.branch)?.name}
                 </p>
@@ -220,20 +221,19 @@ export default function BookingPage() {
                     </div>
 
                     <Button 
-  type="submit" 
-  className="w-full" 
-  size="lg" 
-  disabled={isSubmitting} // بيقفل الزرار أول ما يدوس عشان يمنع التكرار
->
-  {isSubmitting ? (
-    <span className="flex items-center gap-2">
-      {/* اختيار اختياري: ممكن تضيف أنيميشن بسيط هنا */}
-      Sending...
-    </span>
-  ) : (
-    t("submitRequest")
-  )}
-</Button>
+                      type="submit" 
+                      className="w-full" 
+                      size="lg" 
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        <span className="flex items-center gap-2">
+                          Sending...
+                        </span>
+                      ) : (
+                        t("submitRequest")
+                      )}
+                    </Button>
 
                     <p className="text-xs text-muted-foreground">{t("requiredFields")}</p>
                   </form>
@@ -254,10 +254,9 @@ export default function BookingPage() {
                     <CardContent className="p-6">
                       <div className="mb-3 flex items-center justify-between">
                         <h3 className="text-lg font-semibold">{branch.city}</h3>
-                        {/* Added map icon button that opens Google Maps */}
                         <button
                           onClick={() => {
-                            const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(branch.address)}+${encodeURIComponent(branch.city)}`
+                            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(branch.address)}+${encodeURIComponent(branch.city)}`
                             window.open(googleMapsUrl, "_blank")
                           }}
                           className="rounded-full p-2 hover:bg-primary/10 transition-colors"
