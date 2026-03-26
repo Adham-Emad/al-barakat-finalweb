@@ -579,8 +579,8 @@ function BannerSection() {
   // السويبر هيعرض صورة واحدة بس في كل سلايد
   const slides = [
     { id: 1, src: "/images/newbranch.png", alt: "New Branch" },
-    { id: 2, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
-    { id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
+    //{ id: 2, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
+    //{ id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
 
   ];
 
