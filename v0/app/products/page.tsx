@@ -316,7 +316,7 @@ export default function ProductsPage() {
         {/* div الشعار - يرجى التأكد من استيراد Image من 'next/image' في هذا الملف */}
         <div className="relative h-24 w-24 mb-4">
           <Image
-            src="/images/albarakal-logo (1).png"
+            src="/images/logofinal.png"
             alt="Al-Barakat Hearing Care Center Logo"
             fill
             className="object-contain"

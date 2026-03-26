@@ -499,7 +499,7 @@ export default function HomePage() {
     {/* حجم الشعار: h-64 w-64 كما طلبت */}
     <div className="relative h-20 w-60  mb-1 mr-4 ">
         <Image
-            src="/images/albarakal-logo (1).png"
+            src="/images/logofinal.png"
             alt="Al-Barakat Hearing Care Center Logo"
             fill
             className="object-contain"

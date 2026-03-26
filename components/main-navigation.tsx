@@ -71,9 +71,9 @@ export function MainNavigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="relative w-45 h-40">
+            <div className="relative w-52 h-50">
               <Image
-                src="/logo.png"
+                src="/images/logofinal.png"
                 alt="Al-Barakat Logo"
                 fill
                 className="object-contain"

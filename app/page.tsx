@@ -452,9 +452,9 @@ export default function HomePage() {
               <h4 className="mb-4 text-sm font-semibold invisible">
                   <EditableText contentKey="footer.placeholderTitle" defaultValue="Placeholder" as="span" />
               </h4>
-              <div className="relative h-20 w-60 mb-1 mr-4">
+              <div className="relative h-20 w-70 mb-1 mr-4">
                   <Image
-                      src="/images/albarakal-logo (1).png"
+                      src="/images/logofinal.png"
                       alt="Al-Barakat Hearing Care Center Logo"
                       fill
                       className="object-contain"
@@ -578,9 +578,9 @@ function BannerSection() {
   // هنا المصفوفة بيبقى فيها كل صورة كـ Object عادي
   // السويبر هيعرض صورة واحدة بس في كل سلايد
   const slides = [
-    { id: 1, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
-    { id: 2, src: "/images/022.png", alt: "New Branch" },
-        { id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
+    { id: 1, src: "/images/newbranch.png", alt: "New Branch" },
+    { id: 2, src: "/images/bannerfinal.png", alt: "Special Offer" }, // الصورة الأصلية اللي بعتها
+    { id: 3, src: "/images/حي الروضة.png", alt: "New Branch" },
 
   ];
 
