@@ -36,7 +36,7 @@ export default function RootLayout({
      © {new Date().getFullYear()} Al Barakat Hearing Centers. All rights reserved.
    </p>
    <p className="text-gray-500 font-medium">
-     VAT 300049401300003 | CR 1010068793
+     VAT 300049401300003 | CR 7013626085
    </p>
  </footer>
             {/* --- Floating WhatsApp Button --- */}
