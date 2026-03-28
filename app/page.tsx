@@ -584,7 +584,7 @@ function BannerSection() {
     },
     { 
       id: 2, 
-      src: "/images/roda2.png", 
+      src: "/images/بنر السمعيات (3).png", 
       alt: "Special Offer",
       href: "https://maps.app.goo.gl/iBE8R3RYTgD7XhkF6" // صفحة جوه الموقع
     },
