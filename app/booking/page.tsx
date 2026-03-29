@@ -255,15 +255,21 @@ export default function BookingPage() {
                       <div className="mb-3 flex items-center justify-between">
                         <h3 className="text-lg font-semibold">{branch.city}</h3>
                         <button
-                          onClick={() => {
-                            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(branch.address)}+${encodeURIComponent(branch.city)}`
-                            window.open(googleMapsUrl, "_blank")
-                          }}
-                          className="rounded-full p-2 hover:bg-primary/10 transition-colors"
-                          title="Open in Google Maps"
-                        >
-                          <Map className="h-5 w-5 text-primary" />
-                        </button>
+  onClick={() => {
+    // بدل ما نكتب لينك جديد، هنستخدم اللينك اللي إنت معرفه أصلاً في الداتا
+    if (branch.mapUrl) {
+      window.open(branch.mapUrl, "_blank")
+    } else {
+      // كحل احتياطي لو اللينك مش موجود، يفتح بحث جوجل بالعنوان
+      const fallbackUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(branch.name + " " + branch.address)}`
+      window.open(fallbackUrl, "_blank")
+    }
+  }}
+  className="rounded-full p-2 hover:bg-primary/10 transition-colors"
+  title="Open in Google Maps"
+>
+  <Map className="h-5 w-5 text-primary" />
+</button>
                       </div>
                       <div className="space-y-2 text-sm">
                         <div className="flex items-start gap-2">

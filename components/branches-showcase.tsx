@@ -156,14 +156,14 @@ export function BranchesShowcase() {
             <Card
               key={branch.id}
               className={cn(
-                "cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2",
+                "cursor-pointer transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-2 flex flex-col h-full",
                 selectedBranch.id === branch.id
                   ? "border-primary shadow-lg"
                   : "border-transparent hover:border-primary/50",
               )}
               onClick={() => setSelectedBranch(branch)}
             >
-              <CardContent className="p-4">
+              <CardContent className="p-4 flex flex-col flex-1">
                 <div className="mb-3 flex items-start justify-between">
                   <div>
                     <h3 className="font-bold text-lg text-balance">{branch.city}</h3>
@@ -185,20 +185,24 @@ export function BranchesShowcase() {
                   </button>
                 </div>
 
-                <div className="space-y-2 text-sm mb-4">
+                {/* الجزء المسؤول عن محاذاة المحتوى */}
+                <div className="space-y-2 text-sm mb-4 flex-1">
                   <div className="flex gap-2 text-muted-foreground">
                     <Phone className="h-4 w-4 flex-shrink-0" />
-                    <a href={`tel:${branch.phone}`} className="hover:text-primary transition-colors line-clamp-1">
+                    <span className="hover:text-primary transition-colors line-clamp-1">
                       {branch.phone}
-                    </a>
+                    </span>
                   </div>
-                  <div className="flex gap-2 text-muted-foreground">
+                  
+                  {/* min-h هنا بتضمن إن الكارت يحجز مكان لسطرين عنوان دايماً */}
+                  <div className="flex gap-2 text-muted-foreground min-h-[40px]">
                     <MapPin className="h-4 w-4 flex-shrink-0" />
-                    <p className="line-clamp-2">{branch.address}</p>
+                    <p className="line-clamp-2 leading-tight">{branch.address}</p>
                   </div>
                 </div>
 
-                <Button asChild size="sm" className="w-full">
+                {/* mt-auto بتجبر الزرار يلزق في أسفل الكارت */}
+                <Button asChild size="sm" className="w-full mt-auto">
                   <a href={branch.mapUrl} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" />
                     View on Maps
